@@ -1,822 +1,467 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-    <head>
-        <!-- meta data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Grupo Leal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/js/script.js">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <header class="bg-[#193C3A] hidden md:block"
+        style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
+        <div class="container mx-auto flex items-center h-24 justify-between">
+            <a class="logo mr-auto" style="margin: 0 auto;">
+                <img class="h-18" src="assets/images/home/Logo.png" alt="index.html" />
+            </a>
+            <nav class="navbar contents font-semibold text-base lg:text-lg text-[#FCEDC9]">
+                <ul class="mx-auto flex items-start">
+                    <li class="p-5 xl:p-8 active">
+                        <a href="">
+                            <span>Areas de especialidad</span>
+                        </a>
+                    </li>
+                    <li class="p-5 xl:p-8">
+                        <a href="pages/gallery.html">
+                            <span>Galeria</span>
+                        </a>
+                    </li>
+                    <li class="p-5 xl:p-8">
+                        <a href="pages/casos.html">
+                            <span>Casos</span>
+                        </a>
+                    </li>
+                    <li class="p-5 xl:p-8">
+                        <a href="#abogados">
+                            <span>Acerca de nosotros</span>
+                        </a>
+                    </li>
+                    <li class="p-5 xl:p-8">
+                        <a href="pages/contactanos.html">
+                            <span>Contáctanos</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        </div>
+        <div class="bg-opacity-0 h-screen flex justify-center items-center">
+            <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+                <div>
+                    <h1
+                        class="block text-8xl font-bold text-[#FCEDC9] sm:text-4xl lg:text-6xl lg:leading-tight text-[#FCEDC9]">
+                        SIN DUDAS
+                    </h1>
+                    <h1
+                        class="block text-8xl font-bold text-[#FCEDC9] sm:text-4xl lg:text-6xl lg:leading-tight text-[#FCEDC9]">
+                        NI DEUDAS
+                    </h1>
+                    <div class="mt-7 grid gap-3 w-full justify-center sm:inline-flex">
+                        <a class="py-3 px-4 inline-flex justify-around items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#FCEDC9] text-[#193C3A] hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-60"
+                            href="#">
+                            Consulta
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+
+    <!-- Navbar Mobile -->
+    <nav class="bg-black text-white shadow-lg block md:hidden">
+        <div class="container mx-auto flex items-center h-24">
+            <a href="" class="flex items-center justify-center">
+                <img class="h-16" src="assets/images/home/Logo.png" alt="" />
+            </a>
+            <button class="ml-auto mr-4 focus:outline-none">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden">
+            <ul class="mx-auto flex items-start">
+                <li class="p-5 xl:p-8 active">
+                    <a href="">
+                        <span>Areas de especialidad</span>
+                    </a>
+                </li>
+                <li class="p-5 xl:p-8">
+                    <a href="">
+                        <span>Galeria</span>
+                    </a>
+                </li>
+                <li class="p-5 xl:p-8">
+                    <a href="">
+                        <span>Casos</span>
+                    </a>
+                </li>
+                <li class="p-5 xl:p-8">
+                    <a href="#abogados">
+                        <span>Acerca de nosotros</span>
+                    </a>
+                </li>
+                <li class="p-5 xl:p-8">
+                    <a href="">
+                        <span>Contáctanos</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- fin de mobile navbar -->
+
+    <!-- Hero Color -->
+    <section class=" mt-20 bg-[#193C3A] text-white">
+        <div class="container grid grid-cols-1 h-[30rem] md:grid-cols-2 gap-4 items-center justify-center">
+            <div class="px-10 row-span-1 text-center">
+                <h2 class="text-4xl"> <strong>ANTES QUE ABOGADOS</strong> </h2>
+                <h3 class="text-4xl"><strong>SOMOS HUMANOS</strong></h3>
+                <p class="text-center mt-7">
+                    En Grupo Leal, nuestra misión es brindar representación legal excepcional a clientes que han
+                    resultado lesionados en un accidente de auto, en el trabajo o debido a la negligencia de otros.
+                    Estamos dedicados a ayudar a nuestros clientes a obtener la compensación que merecen.
+                </p>
+            </div>
+            <div class="row-span-1 absolute right-3">
+                <img class="lazyload" src="assets/images/home/balanza.png" alt="" style="width: 60%;" />
+            </div>
+        </div>
+    </section>
+
+    <!-- component -->
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+
+    <img class src="assets/images/home/Casos2.png" alt="" />
+    <div class="container mb-4" style="display: grid; place-items: center;">
+        <section class="grid gap-12 md:grid-cols-4 md:gap-16">
+            <article>
+                <h2 style="margin-left: 20px;">
+                    <span
+                        class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                        x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:1000]'">
+                        <span class="supports-[counter-set]:sr-only">1000</span>+
+                    </span>
+                </h2>
+            </article>
+            <article>
+                <h2>
+                    <span
+                        class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                        x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:10]'">
+                        <span class="supports-[counter-set]:sr-only">10</span>%
+                    </span>
+                </h2>
+            </article>
+            <article>
+                <h2>
+                    <span
+                        class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                        x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:2]'">
+                        <span class="supports-[counter-set]:sr-only">2</span> yrs
+                    </span>
+                </h2>
+            </article>
+            <article>
+                <h2>
+                    <span
+                        class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                        x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:20]'">
+                        <span class="supports-[counter-set]:sr-only">20</span>+
+                    </span>
+                </h2>
+            </article>
+        </section>
+    </div>
+
+    <!-- This is an example component -->
+    <div class="w-full mx-auto mb-4">
+
+        <div class="mt-7 border-gray-200 dark:border-gray-700 mb-4">
+            <ul class="flex flex-wrap -mb-px justify-around" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                <li class="mr-2" role="presentation">
+                    <button
+                        class="flex justify-center inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active"
+                        id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
+                        aria-selected="true">ACCIDENTES AUTOMAVILISTICOS</button>
+                </li>
+                <li class="mr-2" role="presentation">
+                    <button
+                        class="flex justify-center inline-block text-red hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                        id="abuso-tab" data-tabs-target="#abuso" type="button" role="tab" aria-controls="abuso"
+                        aria-selected="false">ABUSO / ACOSO SEXUAL</button>
+                </li>
+                <li class="mr-2" role="presentation">
+                    <button
+                        class="flex justify-center inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 "
+                        id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
+                        aria-selected="false">ACCIDENTES LABORALES</button>
+                </li>
+                <li role="presentation">
+                    <button
+                        class="justify-content: center inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                        id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts"
+                        aria-selected="false">MORDEDURAS DE ANIMALES </button>
+                </li>
+            </ul>
+        </div>
+        <div id="myTabContent">
+            <div class="rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
+                    <div class="row-span-1 flex justify-center">
+                        <img class="h-full" src="assets/images/home/puerta.png" alt="" />
+                    </div>
+                    <div class="row-span-1 text-center">
+                        <h4 class="text-2xl md:text-xl mb-4 text-[#193C3A]">ACCIDENTES AUTOMAVILISTICOS</h4>
+                        <!-- slider -->
+                        <div class="text-[#255344] mx-14 h-40 rounded-full flex items-center justify-center">
+                            <p class="text-center mx-14">
+                                No importa dónde, ni cómo te hayan chocado, nosotros te conectamos con el mejor abogado
+                                para que obtengas el mayor apoyo legal y económico según las circunstancias.
+                                Los choques son eventos inesperados que interrumpen la paz cotidiana y estabilidad
+                                financiera, en especial cuando seres amados terminan en el hospital o, peor aún, cuando
+                                alguien fallece.
+                                <strong>$1,500,000.00</strong> a favor de la pareja.
+                            </p>
+                        </div>
+                        <!-- slider -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="abuso" role="tabpanel"
+                aria-labelledby="abuso-tab">
+                <div class="rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
+                        <div class="row-span-1 flex justify-center">
+                            <img class="h-full" src="assets/images/home/mano.png" alt="" />
+                        </div>
+                        <div class="row-span-1 text-center">
+                            <h4 class="text-2xl md:text-xl mb-4 text-black">ACCIDENTES AUTOMAVILISTICOS</h4>
+                            <!-- slider -->
+                            <div class="text-black mx-14 h-40 rounded-full flex items-center justify-center">
+                                <p class="text-center mx-14">
+                                    Pareja fue arrollada por un conductor que iba distraída en su celular.
+                                    Obtuvimos
+                                    <strong>$4,500,000.00</strong> a favor de la pareja.
+                                </p>
+                            </div>
+                            <!-- slider -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="settings" role="tabpanel"
+                aria-labelledby="settings-tab">
+                <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
+                    <div class="row-span-1 flex justify-center">
+                        <img class="h-full" src="assets/images/home/andadera.png" alt="" />
+                    </div>
+                    <div class="row-span-1 text-center">
+                        <h4 class="text-2xl md:text-xl mb-4 text-black">ACCIDENTES AUTOMAVILISTICOS</h4>
+                        <!-- slider -->
+                        <div class="text-black mx-14 h-40 rounded-full flex items-center justify-center">
+                            <p class="text-center mx-14">
+                                Pareja fue arrollada por un conductor que iba distraída en su celular.
+                                Obtuvimos
+                                <strong>$4,500,000.00</strong> a favor de la pareja.
+                            </p>
+                        </div>
+                        <!-- slider -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts" role="tabpanel"
+                aria-labelledby="contacts-tab">
+                <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
+                    <div class="row-span-1 flex justify-center">
+                        <img class="h-full" src="assets/images/home/perro.png" alt="" />
+                    </div>
+                    <div class="row-span-1 text-center">
+                        <h4 class="text-2xl md:text-xl mb-4 text-black">ACCIDENTES AUTOMAVILISTICOS</h4>
+                        <!-- slider -->
+                        <div class="text-black mx-14 h-40 rounded-full flex items-center justify-center">
+                            <p class="text-center mx-14">
+                                Pareja fue arrollada por un conductor que iba distraída en su celular.
+                                Obtuvimos
+                                <strong>$4,500,000.00</strong> a favor de la pareja.
+                            </p>
+                        </div>
+                        <!-- slider -->
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <section class="bg-[#FCEDC9] text-[#193C3A] py-20">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center h-full justify-center">
+            <div id="abogados" class="row-span-1 text-center ">
+                <h4 class="text-10xl md:text-4xl mb-4 font-bold">Podemos conectarte</h4>
+                <h4 class="text-5xl md:text-4xl mb-4 font-bold">con los mejores abogados</h4>
+                <!-- slider -->
+                <div>
+                    <div>
+                        <div class="text-[#255344] flex items-center justify-center">
+                            <p class="text- mx-14 font-bold">
+                                Te conectaremos con el abogado adecuado para manejar tu caso de lesiones personales. 
+                                Los casos  de lesiones personales son algunos de los asuntos legales más estresantes y
+                                confusos que
+                                la mayoría de las personas encontrarán en sus vidas. Pocas personas saben esto, pero las
+                                lesiones personales van más
+                                allá de los accidentes automovilísticos.   Los casos de lesiones personales incluyen
+                                muerte por negligencia, lesiones por quemaduras,
+                                peatones atropellados, golpes y fugas, lesiones por amputación, ataques de animales,
+                                mordeduras de perros, productos defectuosos, vehículos defectuosos,
+                                colisiones vehiculares, locales peligrosos, entre otros.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- slider -->
+            </div>
+            <div class="row-span-1 absolute right-0" style="height: 590px; ">
+                <img src="assets/images/home/martillo.png" alt="" />
+            </div>
+        </div>
+    </section>
+
+    <div class="h-[10rem]">
+
+    </div>
+    <div x-data="{ state: false }">
+        <section class="mx-auto max-w-screen-xl pb-4 px-4 sm:px-8">
+            <div class="text-center space-y-4 py-10">
+                <h1 class="text-gray-800 font-bold text-4xl md:text-5xl">
+                    La Experiencia Cuenta
+                </h1>
+                <p class="mt-7 flex justify-center text-justify text-[#255344]">
+                    Nuestro equipo de abogados especializados en casos de lesiones personales tiene décadas de
+                    experiencia en la gestión de una amplia gama de situaciones, incluyendo accidentes automovilísticos,
+                    mordeduras de perros y casos de acoso sexual. Contamos con un historial comprobado de éxito en los
+                    tribunales y hemos asegurado millones en compensación para nuestros clientes en estas áreas
+                    específicas del derecho.
+                    Nuestra dedicación y habilidades legales han sido fundamentales para obtener resultados exitosos en
+                    casos que abarcan desde lesiones causadas por accidentes automovilísticos hasta reclamaciones por
+                    mordeduras de perros y casos de acoso sexual. Confíe en nuestro equipo para representar sus
+                    intereses con determinación y obtener la compensación justa que usted merece en estas situaciones
+                    delicadas y complejas.
+                </p>
+            </div>
+            <div class="mt-8">
+                <a href="#" target="_blank" class="block">
+            <p class="mt-8 text-sm font-normal text-white">
+                Grupo Leal
+            </p>
+                </a>
+            </div>
+            <p class="mt-8 text-sm font-normal text-white">
+                Grupo Leal
+            </p>
+        </section>
+
+    </div>
+
+
+<!--Footer container-->
+<footer class="flex flex-col items-center bg-[#193C3A] text-center text-surface dark:bg-[#193C3A] dark:text-white">
+    <div class="container mx-auto grid grid-cols-3 gap-4 pt-9">
+        <!-- Logo container -->
+        <div class="flex items-center justify-center">
+            <img src="assets/images/home/logob.png" alt="Logo">
+        </div>
+
+        <!-- Texto y iconos de redes sociales -->
+        <div class="flex flex-col items-center justify-center space-y-2">
+            <!-- Texto encima de los iconos -->
+            <p class="text-white"><strong>LEGAL SERVICES</strong> <br>1324 N Broadway Santa Ana CA 92660 <br> 714-560-7251 - Info@Grupoleal.us</p>
+
+            <!-- Iconos de redes sociales -->
+            <div class="py-6 flex justify-center space-x-2">
+                <a href="#" class="text-gray-300 hover:text-gray-400 mx-2">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.44 14H11v-5.5h2.4V11h-2.4V9.48c0-1.04.36-1.76 1.16-1.76h1.28V6.32c-.24-.04-1.08-.08-2.04-.08-2 0-3.36 1.2-3.36 3.4V11H8v2.5h1.6V16z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-gray-400 mx-2">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20.84 7.76c-.76 0-1.52.28-2.12.88l-1.76 1.76-2.12-2.12 1.76-1.76c1.16-1.16 3.04-1.16 4.2 0 1.16 1.16 1.16 3.04 0 4.2l-3.64 3.64c-.56.56-1.32.88-2.12.88s-1.56-.36-2.12-.88L7.64 11l-.88.88V11c0-2.76 2.24-5 5-5h.88l.88-.88h-3.6C5.76 4.12 4 6.24 4 9v6c0 2.76 2.24 5 5 5h6c2.76 0 5-2.24 5-5v-3.6l.88-.88v.88c0 2.76-2.24 5-5 5H9c-2.76 0-5-2.24-5-5V9c0-2.76 2.24-5 5-5h7.84l1.76-1.76c.6-.6.88-1.36.88-2.12s-.32-1.52-.88-2.08c-.6-.6-1.36-.88-2.12-.88z" />
+                    </svg>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-gray-400 mx-2">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M16.5 1.5h-9C5.57 1.5 4.5 2.57 4.5 4.03v15.94C4.5 20.43 5.57 21.5 7.03 21.5h9c1.46 0 2.5-1.07 2.5-2.53V4.03C19 2.57 17.96 1.5 16.5 1.5zM12 15.5H9v-6h3v6zm4.5 0h-1v-2.53c0-.75-.68-1.47-1.43-1.47h-2.28c-.75 0-1.43.72-1.43 1.47V15.5H7.5v-6h1v2.3c0 .4.34.73.75.73h5.5c.41 0 .75-.33.75-.73v-2.3h1v6z" />
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Texto de derechos de autor -->
+        <div class="flex items-center justify-center">
+            <p class="text-white">INGLES / ESPAÑOL</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <style>
+        @property --num {
+            syntax: '<integer>';
+            initial-value: 0;
+            inherits: false;
+        }
+    </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</body>
 
-        <!--font-family-->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
-        
-        <!-- title of site -->
-        <title>CarVilla</title>
-
-        <!-- For favicon png -->
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-       
-        <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-        <!--linear icon css-->
-		<link rel="stylesheet" href="assets/css/linearicons.css">
-
-        <!--flaticon.css-->
-		<link rel="stylesheet" href="assets/css/flaticon.css">
-
-		<!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
-
-        <!--owl.carousel.css-->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-		
-        <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
-        
-        <!--style.css-->
-        <link rel="stylesheet" href="assets/css/style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
-
-    </head>
-	
-	<body>
-
-		<section id="home" class="welcome-hero">
-
-			<!-- top-area Start -->
-			<div class="top-area">
-				<div class="header-area">
-					<!-- Start Navigation -->
-				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-
-				        <div class="container">
-
-				            <!-- Start Header Navigation -->
-				            <div class="navbar-header">
-				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-				                    <i class="fa fa-bars"></i>
-				                </button>
-				                <a class="navbar-brand" href="index.html">carvilla<span></span></a>
-
-				            </div><!--/.navbar-header-->
-				            <!-- End Header Navigation -->
-
-				            <!-- Collect the nav links, forms, and other content for toggling -->
-				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-				                    <li class=" scroll active"><a href="#home">home</a></li>
-				                    <li class="scroll"><a href="#service">service</a></li>
-				                    <li class="scroll"><a href="#featured-cars">featured cars</a></li>
-				                    <li class="scroll"><a href="#new-cars">new cars</a></li>
-				                    <li class="scroll"><a href="#brand">brands</a></li>
-				                    <li class="scroll"><a href="#contact">contact</a></li>
-				                </ul><!--/.nav -->
-				            </div><!-- /.navbar-collapse -->
-				        </div><!--/.container-->
-				    </nav><!--/nav-->
-				    <!-- End Navigation -->
-				</div><!--/.header-area-->
-			    <div class="clearfix"></div>
-
-			</div><!-- /.top-area-->
-			<!-- top-area End -->
-
-			<div class="container">
-				<div class="welcome-hero-txt">
-					<h2>get your desired car in resonable price</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore   magna aliqua. 
-					</p>
-					<button class="welcome-btn" onclick="window.location.href='#'">contact us</button>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="model-search-content">
-							<div class="row">
-								<div class="col-md-offset-1 col-md-2 col-sm-12">
-									<div class="single-model-search">
-										<h2>select year</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">year</option><!-- /.option-->
-
-											  	<option value="2018">2018</option><!-- /.option-->
-
-											  	<option value="2017">2017</option><!-- /.option-->
-											  	<option value="2016">2016</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-									<div class="single-model-search">
-										<h2>body style</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">style</option><!-- /.option-->
-
-											  	<option value="sedan">sedan</option><!-- /.option-->
-
-											  	<option value="van">van</option><!-- /.option-->
-											  	<option value="roadster">roadster</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-								</div>
-								<div class="col-md-offset-1 col-md-2 col-sm-12">
-									<div class="single-model-search">
-										<h2>select make</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">make</option><!-- /.option-->
-
-											  	<option value="toyota">toyota</option><!-- /.option-->
-
-											  	<option value="holden">holden</option><!-- /.option-->
-											  	<option value="maecedes-benz">maecedes-benz.</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-									<div class="single-model-search">
-										<h2>car condition</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">condition</option><!-- /.option-->
-
-											  	<option value="something">something</option><!-- /.option-->
-
-											  	<option value="something">something</option><!-- /.option-->
-											  	<option value="something">something</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-								</div>
-								<div class="col-md-offset-1 col-md-2 col-sm-12">
-									<div class="single-model-search">
-										<h2>select model</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">model</option><!-- /.option-->
-
-											  	<option value="kia-rio">kia-rio</option><!-- /.option-->
-
-											  	<option value="mitsubishi">mitsubishi</option><!-- /.option-->
-											  	<option value="ford">ford</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-									<div class="single-model-search">
-										<h2>select price</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">price</option><!-- /.option-->
-
-											  	<option value="$0.00">$0.00</option><!-- /.option-->
-
-											  	<option value="$0.00">$0.00</option><!-- /.option-->
-											  	<option value="$0.00">$0.00</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-								</div>
-								<div class="col-md-2 col-sm-12">
-									<div class="single-model-search text-center">
-										<button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
-											search
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
-
-		<!--service start -->
-		<section id="service" class="service">
-			<div class="container">
-				<div class="service-content">
-					<div class="row">
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service-item">
-								<div class="single-service-icon">
-									<i class="flaticon-car"></i>
-								</div>
-								<h2><a href="#">largest dealership <span> of</span> car</a></h2>
-								<p>
-									Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service-item">
-								<div class="single-service-icon">
-									<i class="flaticon-car-repair"></i>
-								</div>
-								<h2><a href="#">unlimited repair warrenty</a></h2>
-								<p>
-									Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
-								</p>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<div class="single-service-item">
-								<div class="single-service-icon">
-									<i class="flaticon-car-1"></i>
-								</div>
-								<h2><a href="#">insurence support</a></h2>
-								<p>
-									Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia. 
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!--/.container-->
-
-		</section><!--/.service-->
-		<!--service end-->
-
-		<!--new-cars start -->
-		<section id="new-cars" class="new-cars">
-			<div class="container">
-				<div class="section-header">
-					<p>checkout <span>the</span> latest cars</p>
-					<h2>newest cars</h2>
-				</div><!--/.section-header-->
-				<div class="new-cars-content">
-					<div class="owl-carousel owl-theme" id="new-cars-carousel">
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-									<div class="col-md-7 col-sm-12">
-										<div class="new-cars-img">
-											<img src="assets/images/new-cars-model/ncm1.png" alt="img"/>
-										</div><!--/.new-cars-img-->
-									</div>
-									<div class="col-md-5 col-sm-12">
-										<div class="new-cars-txt">
-											<h2><a href="#">chevrolet camaro <span> za100</span></a></h2>
-											<p>
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-											</p>
-											<p class="new-cars-para2">
-												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
-											</p>
-											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
-												view details
-											</button>
-										</div><!--/.new-cars-txt-->	
-									</div><!--/.col-->
-								</div><!--/.row-->
-							</div><!--/.single-new-cars-item-->
-						</div><!--/.new-cars-item-->
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-									<div class="col-md-7 col-sm-12">
-										<div class="new-cars-img">
-											<img src="assets/images/new-cars-model/ncm2.png" alt="img"/>
-										</div><!--/.new-cars-img-->
-									</div>
-									<div class="col-md-5 col-sm-12">
-										<div class="new-cars-txt">
-											<h2><a href="#">BMW series-3 wagon</a></h2>
-											<p>
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-											</p>
-											<p class="new-cars-para2">
-												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
-											</p>
-											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
-												view details
-											</button>
-										</div><!--/.new-cars-txt-->	
-									</div><!--/.col-->
-								</div><!--/.row-->	
-							</div><!--/.single-new-cars-item-->
-						</div><!--/.new-cars-item-->
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-									<div class="col-md-7 col-sm-12">
-										<div class="new-cars-img">
-											<img src="assets/images/new-cars-model/ncm3.png" alt="img"/>
-										</div><!--/.new-cars-img-->
-									</div>
-									<div class="col-md-5 col-sm-12">
-										<div class="new-cars-txt">
-											<h2><a href="#">ferrari 488 superfast</a></h2>
-											<p>
-												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-											</p>
-											<p class="new-cars-para2">
-												Sed ut pers unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. 
-											</p>
-											<button class="welcome-btn new-cars-btn" onclick="window.location.href='#'">
-												view details
-											</button>
-										</div><!--/.new-cars-txt-->	
-									</div><!--/.col-->
-								</div><!--/.row-->
-							</div><!--/.single-new-cars-item-->
-						</div><!--/.new-cars-item-->
-					</div><!--/#new-cars-carousel-->
-				</div><!--/.new-cars-content-->
-			</div><!--/.container-->
-
-		</section><!--/.new-cars-->
-		<!--new-cars end -->
-
-		<!--featured-cars start -->
-		<section id="featured-cars" class="featured-cars">
-			<div class="container">
-				<div class="section-header">
-					<p>checkout <span>the</span> featured cars</p>
-					<h2>featured cars</h2>
-				</div><!--/.section-header-->
-				<div class="featured-cars-content">
-					<div class="row">
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc1.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">BMW 6-series gran coupe</a></h2>
-									<h3>$89,395</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc2.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">chevrolet camaro <span>wmv20</span></a></h2>
-									<h3>$66,575</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc3.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">lamborghini <span>v520</span></a></h2>
-									<h3>$125,250</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc4.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">audi <span> a3</span> sedan</a></h2>
-									<h3>$95,500</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc4.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">infiniti <span>z5</span></a></h2>
-									<h3>$36,850</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc5.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">porsche <span>718</span> cayman</a></h2>
-									<h3>$48,500</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc7.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#"><span>bmw 8-</span>series coupe</a></h2>
-									<h3>$56,000</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc8.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">BMW <span> x</span>series-6</a></h2>
-									<h3>$75,800</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!--/.container-->
-
-		</section><!--/.featured-cars-->
-		<!--featured-cars end -->
-
-		<!-- clients-say strat -->
-		<section id="clients-say"  class="clients-say">
-			<div class="container">
-				<div class="section-header">
-					<h2>what our clients say</h2>
-				</div><!--/.section-header-->
-				<div class="row">
-					<div class="owl-carousel testimonial-carousel">
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="assets/images/clients/c1.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">tomas lili</a></h2>
-										<h4>new york</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="assets/images/clients/c2.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">romi rain</a></h2>
-										<h4>london</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="assets/images/clients/c3.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">john doe</a></h2>
-										<h4>washington</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-					</div><!--/.testimonial-carousel-->
-				</div><!--/.row-->
-			</div><!--/.container-->
-
-		</section><!--/.clients-say-->	
-		<!-- clients-say end -->
-
-		<!--brand strat -->
-		<section id="brand"  class="brand">
-			<div class="container">
-				<div class="brand-area">
-					<div class="owl-carousel owl-theme brand-item">
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/brand/br1.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/brand/br2.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/brand/br3.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/brand/br4.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/brand/br5.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/brand/br6.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-					</div><!--/.owl-carousel-->
-				</div><!--/.clients-area-->
-
-			</div><!--/.container-->
-
-		</section><!--/brand-->	
-		<!--brand end -->
-
-		<!--blog start -->
-		<section id="blog" class="blog"></section><!--/.blog-->
-		<!--blog end -->
-
-		<!--contact start-->
-		<footer id="contact"  class="contact">
-			<div class="container">
-				<div class="footer-top">
-					<div class="row">
-						<div class="col-md-3 col-sm-6">
-							<div class="single-footer-widget">
-								<div class="footer-logo">
-									<a href="index.html">carvilla</a>
-								</div>
-								<p>
-									Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
-								</p>
-								<div class="footer-contact">
-									<p>info@themesine.com</p>
-									<p>+1 (885) 2563154554</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-6">
-							<div class="single-footer-widget">
-								<h2>about devloon</h2>
-								<ul>
-									<li><a href="#">about us</a></li>
-									<li><a href="#">career</a></li>
-									<li><a href="#">terms <span> of service</span></a></li>
-									<li><a href="#">privacy policy</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<div class="single-footer-widget">
-								<h2>top brands</h2>
-								<div class="row">
-									<div class="col-md-7 col-xs-6">
-										<ul>
-											<li><a href="#">BMW</a></li>
-											<li><a href="#">lamborghini</a></li>
-											<li><a href="#">camaro</a></li>
-											<li><a href="#">audi</a></li>
-											<li><a href="#">infiniti</a></li>
-											<li><a href="#">nissan</a></li>
-										</ul>
-									</div>
-									<div class="col-md-5 col-xs-6">
-										<ul>
-											<li><a href="#">ferrari</a></li>
-											<li><a href="#">porsche</a></li>
-											<li><a href="#">land rover</a></li>
-											<li><a href="#">aston martin</a></li>
-											<li><a href="#">mersedes</a></li>
-											<li><a href="#">opel</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-offset-1 col-md-3 col-sm-6">
-							<div class="single-footer-widget">
-								<h2>news letter</h2>
-								<div class="footer-newsletter">
-									<p>
-										Subscribe to get latest news  update and informations
-									</p>
-								</div>
-								<div class="hm-foot-email">
-									<div class="foot-email-box">
-										<input type="text" class="form-control" placeholder="Add Email">
-									</div><!--/.foot-email-box-->
-									<div class="foot-email-subscribe">
-										<span><i class="fa fa-arrow-right"></i></span>
-									</div><!--/.foot-email-icon-->
-								</div><!--/.hm-foot-email-->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-copyright">
-					<div class="row">
-						<div class="col-sm-6">
-							<p>
-								&copy; copyright.designed and developed by <a href="https://www.themesine.com/">themesine</a>.
-							</p><!--/p-->
-						</div>
-						<div class="col-sm-6">
-							<div class="footer-social">
-								<a href="#"><i class="fa fa-facebook"></i></a>	
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-								<a href="#"><i class="fa fa-pinterest-p"></i></a>
-								<a href="#"><i class="fa fa-behance"></i></a>	
-							</div>
-						</div>
-					</div>
-				</div><!--/.footer-copyright-->
-			</div><!--/.container-->
-
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-				</div>
-				
-			</div><!--/.scroll-Top-->
-			
-        </footer><!--/.contact-->
-		<!--contact end-->
-
-
-		
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
-
-		<script src="assets/js/jquery.js"></script>
-        
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-
-		<!--owl.carousel.js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
-        
-    </body>
-	
 </html>
