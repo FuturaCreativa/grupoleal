@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
     <!-- Title -->
@@ -21,7 +20,7 @@
                 <img class="h-24 px-5" src="../assets/images/casos/Logo.png" alt="" href="../index.html"/>
             </a>
             <nav class="navbar contents font-semibold text-base lg:text-lg text-[#193C3A] hover:text-red">
-                <ul class="mx-auto flex items-start ">
+                <ul class="mx-auto flex items-start font-bold">
                     <li class="p-5 xl:p-8 active">
                         <a href="../index.html">
                             <span>Inicio</span>
@@ -48,7 +47,7 @@
                         </a>
                     </li>
                     <li class="p-5 xl:p-8">
-                        <a href="../pages/contactanos.html">
+                        <a href="../pages/contactanos.html" class="hover: text-[#5D7F7B]">
                             <span>Contáctanos</span>
                         </a>
                     </li>
@@ -105,25 +104,13 @@
     <!-- fin de mobile navbar -->
 
 <!-- component -->
-<!-- 
-    =======================================================================
-
-    This is a working contact form. To receive email, 
-    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
-
-    Create Access Key here ? https://web3forms.com/
-
-    Surjith S M (@surjithctly)
-    =======================================================================
- -->
-
 
 
     <section class="mt-10 bg-[#FCEDC9] h-[20vh]">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center"
             style="height: inherit;">
-            <div class="row-span-1 text-center">
-                <h1 class="text-4xl font-bold"> </h1>
+            <div class="row-span-1 text-center text-[#193C3A]">
+                <h1 class="text-4xl font-bold">Contactanos</h1>
             </div>
             <div class="row-span-1 absolute right-0">
                 <img class="h-4/5" src="../assets/images/contactanos/telefono.png" alt="" />
@@ -504,45 +491,7 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </section>
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto grid grid-cols-3 gap-4">
-            <!-- Primer Grid: Logo -->
-            <div class="flex items-center justify-center">
-                <img src="ruta/al/logo.png" alt="Logo" class="h-12">
-            </div>
-            
-            <!-- Segundo Grid: Iconos de redes sociales -->
-            <div class="flex items-center justify-center">
-                <div>
-                    <a href="#" class="text-gray-300 hover:text-gray-400 mx-2">
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.44 14H11v-5.5h2.4V11h-2.4V9.48c0-1.04.36-1.76 1.16-1.76h1.28V6.32c-.24-.04-1.08-.08-2.04-.08-2 0-3.36 1.2-3.36 3.4V11H8v2.5h1.6V16z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-300 hover:text-gray-400 mx-2">
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M20.84 7.76c-.76 0-1.52.28-2.12.88l-1.76 1.76-2.12-2.12 1.76-1.76c1.16-1.16 3.04-1.16 4.2 0 1.16 1.16 1.16 3.04 0 4.2l-3.64 3.64c-.56.56-1.32.88-2.12.88s-1.56-.36-2.12-.88L7.64 11l-.88.88V11c0-2.76 2.24-5 5-5h.88l.88-.88h-3.6C5.76 4.12 4 6.24 4 9v6c0 2.76 2.24 5 5 5h6c2.76 0 5-2.24 5-5v-3.6l.88-.88v.88c0 2.76-2.24 5-5 5H9c-2.76 0-5-2.24-5-5V9c0-2.76 2.24-5 5-5h7.84l1.76-1.76c.6-.6.88-1.36.88-2.12s-.32-1.52-.88-2.08c-.6-.6-1.36-.88-2.12-.88z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-300 hover:text-gray-400 mx-2">
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M16.5 1.5h-9C5.57 1.5 4.5 2.57 4.5 4.03v15.94C4.5 20.43 5.57 21.5 7.03 21.5h9c1.46 0 2.5-1.07 2.5-2.53V4.03C19 2.57 17.96 1.5 16.5 1.5zM12 15.5H9v-6h3v6zm4.5 0h-1v-2.53c0-.75-.68-1.47-1.43-1.47h-2.28c-.75 0-1.43.72-1.43 1.47V15.5H7.5v-6h1v2.3c0 .4.34.73.75.73h5.5c.41 0 .75-.33.75-.73v-2.3h1v6z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Tercer Grid: Texto -->
-            <div class="flex items-center justify-center">
-                <p class="text-gray-300">© 2024 Todos los derechos reservados</p>
-            </div>
-        </div>
-    </footer>
-    
+    </section>    
 </body>
 
 </html>
