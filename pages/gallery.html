@@ -58,32 +58,67 @@
   </div>
 </header>
 
-  <!-- partial:index.partial.html -->
-  <section class="my-10">
-    <section class="carousel-3D-swiper-section">
+<section class="my-10">
+  <h2 class="carousel-3D-swiper-title text-[#193C3A]">Galeria</h2>
+  <section class="carousel-3D-swiper-section">
       <!-- Slider main container -->
       <div class="carousel-3D-swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <div class="image-wrapper aspect-video h-[48rem]">
-              <video class="aspect-video" controls loop muted>
-                <source src="../assets/video/Video1.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-              </video>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper" style="max-width: 1200px;">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                  <div class="image-wrapper aspect-video">
+                      <video class="aspect-video" controls>
+                          <source src="../assets/video/Video1.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                      </video>
+                  </div>
+                  <div class="details">
+                      <h3>Lorem ipsum dolor</h3>
+                      <span>Web Designer</span>
+                      <p>Lorem ipsum dolor</p>
+                  </div>
+              </div>
+              <!-- Other slides with video -->
+              <div class="swiper-slide">
+                <div class="image-wrapper aspect-video">
+                    <video class="aspect-video" controls>
+                        <source src="../assets/video/Video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="details">
+                    <h3>Lorem ipsum dolor</h3>
+                    <span>Web Designer</span>
+                    <p>Lorem ipsum dolor</p>
+                </div>
             </div>
+            <!-- Other slides with video -->
+                          <!-- Other slides with video -->
+                          <div class="swiper-slide">
+                            <div class="image-wrapper aspect-video">
+                                <video class="aspect-video" controls>
+                                    <source src="../assets/video/video3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="details">
+                                <h3>Lorem ipsum dolor</h3>
+                                <span>Web Designer</span>
+                                <p>Lorem ipsum dolor</p>
+                            </div>
+                        </div>
+                        <!-- Other slides with video -->
           </div>
-        </div>
-        
+          <!-- pagination -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination" style="bottom: -50px;"></div>
       </div>
-      
-      <!-- pagination -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-      </div>
-    </section>
   </section>
+</section>
+</section><section class="my-10">
+
   <footer class="flex flex-col items-center bg-[#193C3A] text-center text-surface dark:bg-[#193C3A] dark:text-white">
     <div class="container mx-auto grid grid-cols-3 gap-4 pt-9">
         <!-- Logo container -->
@@ -159,11 +194,10 @@
             </div>
 </footer>
 
-  <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js'></script>
-  <script src="../assets/js/script.js"></script>
-
 </body>
 
 </html>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js'></script>
+  <script src="../assets/js/script.js"></script>
 
