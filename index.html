@@ -148,7 +148,7 @@
     <!-- fin de mobile navbar -->
 
     <!-- Hero Color -->
-    <section class=" mt-20 bg-[#193C3A] text-white">
+    <section class=" md:mt-36 bg-[#193C3A] text-white">
         <div class="container grid grid-cols-1 h-[30rem] md:grid-cols-2 gap-4 items-center justify-center">
             <div class="px-10 row-span-1 text-center">
                 <h2 class="text-4xl"> <strong>ANTES QUE ABOGADOS</strong> </h2>
@@ -159,8 +159,8 @@
                     Estamos dedicados a ayudar a nuestros clientes a obtener la compensación que merecen.
                 </p>
             </div>
-            <div class="row-span-1 absolute right-6">
-                <img class="lazyload mr-10 md:block" src="assets/images/home/balanza.png" alt="" style="height: 650px;" />
+            <div class="row-span-1 absolute right-6 justify-center ">
+                <img class="hidden md:block" src="assets/images/home/balanza.png" alt="" style="height: 750px;" />
             </div>
         </div>
     </section>
@@ -168,11 +168,11 @@
     <!-- component -->
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
 
-    <img class src="assets/images/home/Casos2.png" alt="" />
-    <div class="container mb-4" style="display: grid; place-items: center;">
-        <section class="grid gap-12 md:grid-cols-4 md:gap-16">
+    <div class="py-20 grid md:grid-cols-4 justify-items-center sm:grid-cols-1 ">
+        <div class="col-span-1 pt-20">
+            <img src="assets/images/home/Frame 1.png" alt="">
             <article>
-                <h2 style="margin-left: 20px;">
+                <h2 style="margin-left: 10px; ">
                     <span
                         class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
                         x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:1000]'">
@@ -180,8 +180,11 @@
                     </span>
                 </h2>
             </article>
+        </div>
+        <div class="col-span-1 pt-20">
+            <img src="assets/images/home/Frame 2.png" alt="">
             <article>
-                <h2>
+                <h2 style="margin-left: 10px; ">
                     <span
                         class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
                         x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:10]'">
@@ -189,6 +192,9 @@
                     </span>
                 </h2>
             </article>
+        </div>
+        <div class="col-span-1 pt-20">
+            <img src="assets/images/home/Frame 3.png" alt="">
             <article>
                 <h2>
                     <span
@@ -198,6 +204,9 @@
                     </span>
                 </h2>
             </article>
+        </div>
+        <div class="col-span-1 pt-20">
+            <img src="assets/images/home/Frame 4.png" alt="">
             <article>
                 <h2>
                     <span
@@ -207,7 +216,8 @@
                     </span>
                 </h2>
             </article>
-        </section>
+        </div>
+
     </div>
 
     <!-- This is an example component -->
@@ -313,7 +323,6 @@
         </div>
     </div>
     
-
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
     <section class="bg-[#FCEDC9] text-[#193C3A] py-5">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center h-full justify-center">
@@ -341,8 +350,8 @@
                 </div>
                 <!-- slider -->
             </div>
-            <div class="row-span-1 absolute right-0 object-fill" style="height: 590px; ">
-                <img class="px-5" src="assets/images/home/martillo.png" alt="" />
+            <div class="row-span-1 absolute right-0 object-fill" style="height: 590px;">
+                <img class="hidden md:block" src="assets/images/home/martillo.png" alt="Imagen representativa" />
             </div>
         </div>
     </section>
