@@ -56,14 +56,13 @@
         </div>
     </header>
 
-    <!-- Navbar Mobile -->
-    <nav class="bg-black text-white shadow-lg block md:hidden">
+    <nav class="bg-black text-white shadow-lg block md:hidden" 
+    style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
         <div class="container mx-auto flex items-center h-24">
-            <a href="" class="flex items-center justify-center">
-                <img class="h-16" src="https://i.ibb.co/6Yxs70d/2021-10-26-23h27-03.png" alt="" />
-                <span class="ml-4 uppercase font-black"></span>
+            <a href="#" class="flex items-center justify-center">
+                <img class="h-16" src="../assets/images/home/Logo.png" alt="Logo" />
             </a>
-            <button class="ml-auto mr-4 focus:outline-none">
+            <button id="mobile-menu-button" class="ml-auto mr-4 focus:outline-none">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
@@ -71,37 +70,49 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden">
-            <ul class="mt-4">
-                <li class="p-4">
-                    <a href="../index.html">
-                        <span>Home</span>
+        <div id="mobile-menu-container" class="hidden md:hidden"> <!-- Cambiado a "md:hidden" para mostrar en dispositivos móviles -->
+            <ul class="mx-auto flex flex-col items-start">
+                <li class="p-5 xl:p-8 active">
+                    <a href="#">
+                        <span>Areas de especialidad</span>
                     </a>
                 </li>
-                <li class="p-4">
-                    <a href="../pages/">
-                        <span>About</span>
+                <li class="p-5 xl:p-8">
+                    <a href="pages/gallery.html">
+                        <span>Galeria</span>
                     </a>
                 </li>
-                <li class="p-4">
-                    <a href="">
-                        <span>Projects</span>
+                <li class="p-5 xl:p-8">
+                    <a href="pages/casos.html">
+                        <span>Casos</span>
                     </a>
                 </li>
-                <li class="p-4">
-                    <a href="">
-                        <span>Services</span>
+                <li class="p-5 xl:p-8">
+                    <a href="#abogados">
+                        <span>Acerca de nosotros</span>
                     </a>
                 </li>
-                <li class="p-4">
-                    <a href="">
-                        <span>Blog</span>
+                <li class="p-5 xl:p-8">
+                    <a href="pages/contactanos.html">
+                        <span>Contáctanos</span>
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenuContainer = document.getElementById('mobile-menu-container');
+    
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenuContainer.classList.toggle('hidden');
+            });
+        });
+    </script>
     <!-- fin de mobile navbar -->
+    
 
 <!-- component -->
 
@@ -112,8 +123,8 @@
             <div class="row-span-1 text-center text-[#193C3A]">
                 <h1 class="text-5xl font-bold">Contactanos</h1>
             </div>
-            <div class="row-span-1 absolute right-0">
-                <img class="h-4/5" src="../assets/images/contactanos/telefono.png" alt="" />
+            <div class="py-5 row-span-1 absolute right-0">
+                <img class="hidden sm:block lg:h-full" src="../assets/images/contactanos/telefono.png" alt="" />
             </div>
         </div>
     </section>
@@ -272,8 +283,8 @@
             <div class="row-span-1 text-center">
                 <h1 class="text-4xl font-bold">Preguntas Frecuentes</h1>
             </div>
-            <div class="row-span-1 absolute right-0 mb-10">
-                <img class="h-4/5" src="../assets/images/contactanos/question.png" alt="" />
+            <div class="row-span-1 absolute right-0 mb-10 style="height: 690px;">
+                <img class="h-4/5 hidden sm:block lg:h-full md:h-1/2" src="../assets/images/contactanos/question.png" alt="" />
             </div>
         </div>
     </section>
@@ -299,8 +310,8 @@
                         </div>
                     </summary>
                     <div class="text-neutral-600 mt-3 group-open:animate-fadeIn relative">
-                        <img class="w-full" src="../assets/images/contactanos/fondo.png" alt="">
-                        <span class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 text-white">
+                        <img class="w-full hidden md:block" src="../assets/images/contactanos/fondo.png" alt="">
+                        <span class="sm:relative text-[#193C3A] md:text-white md:relative top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 lg:absolute ">
                             <span class="font-bold">¿Hay muchos abogados, por qué acudir a Grupo Leal después de un
                                 choque?</span>
                             <br>

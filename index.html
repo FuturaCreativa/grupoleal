@@ -69,7 +69,7 @@
 
         </div>
         <div class="h-screen flex justify-center items-center">
-            <div class="py-10 grid md:grid-cols-2 gap-5 xl:gap-10">
+            <div class="py-10 grid sm:text-4xl md:grid-cols-2 gap-5 xl:gap-10">
                 <div>
                     <h1
                         class="px-10 block text-8xl font-semibold text-[#FCEDC9]">
@@ -193,90 +193,99 @@
     <div class="py-20 grid md:grid-cols-6 justify-items-center sm:grid-cols-1    ">
         <div class="md:col-start-2 col-span-1 pt-20">
             <img src="assets/images/home/Frame 1.png" alt="">
-            <article>
-                <h2 style="margin-left: 10px; ">
-                    <span
-                        class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                        x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:1000]'">
-                        <span class="supports-[counter-set]:sr-only">1000</span>+
-                    </span>
-                </h2>
-            </article>
+            <div class="text-center mr-10">
+                <article>
+                    <h2>
+                        <span
+                            class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                            x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:1000]'">
+                            <span class="supports-[counter-set]:sr-only">1000</span>+
+                        </span>
+                    </h2>
+                </article>
+            </div>
+
         </div>
-        <div class="col-span-1 pt-20">
+        <div class="col-span-1 pt-20 justify-center">
             <img src="assets/images/home/Frame 2.png" alt="">
-            <article>
-                <h2 style="margin-left: 10px; ">
-                    <span
-                        class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                        x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:10]'">
-                        <span class="supports-[counter-set]:sr-only">10</span>%
-                    </span>
-                </h2>
-            </article>
+            <div class="text-center ml-10">
+                <article>
+                    <h2>
+                        <span
+                            class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                            x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:10]'">
+                            <span class="supports-[counter-set]:sr-only">10</span>%
+                        </span>
+                    </h2>
+                </article>
+            </div>
         </div>
         <div class="col-span-1 pt-20">
             <img src="assets/images/home/Frame 3.png" alt="">
-            <article>
-                <h2>
-                    <span
-                        class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                        x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:2]'">
-                        <span class="supports-[counter-set]:sr-only">2</span> yrs
-                    </span>
-                </h2>
-            </article>
+            <div class="text-center ml-10">
+                <article>
+                    <h2>
+                        <span
+                            class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                            x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:2]'">
+                            <span class="supports-[counter-set]:sr-only ">2</span> yrs
+                        </span>
+                    </h2>
+                </article>
+            </div>
         </div>
-        <div class="col-span-1 pt-20">
+        <div class="col-span-1 pt-20 ">
             <img src="assets/images/home/Frame 4.png" alt="">
-            <article>
-                <h2>
-                    <span
-                        class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
-                        x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:20]'">
-                        <span class="supports-[counter-set]:sr-only">20</span>+
-                    </span>
-                </h2>
-            </article>
+            <div class="text-center ml-10">
+                <article>
+                    <h2>
+                        <span
+                            class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                            x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:20]'">
+                            <span class="supports-[counter-set]:sr-only">20</span>+
+                        </span>
+                    </h2>
+                </article>
+            </div>
+
         </div>
 
     </div>
 
     <!-- This is an example component -->
     <div class="w-full mx-auto mb-4">
-        <div class="mt-7 border-[#183A38] dark:border-[#183A38] mb-4">
+        <div class="mt-7 border-[#255344] dark:border-[#255344] mb-4">
             <ul class="flex flex-wrap -mb-px justify-around" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                 <li class="mr-2" role="presentation">
-                    <button class="flex justify-center inline-block text-[#183A38] hover:text-[#183A38] hover:border-[#183A38] rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-[#183A38] dark:hover:text-[#183A38] active" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">ACCIDENTES AUTOMOVILÍSTICOS</button>
+                    <button class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344] active" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">ACCIDENTES AUTOMOVILÍSTICOS</button>
                 </li>
                 <li class="mr-2" role="presentation">
-                    <button class="flex justify-center inline-block text-red hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="abuso-tab" data-tabs-target="#abuso" type="button" role="tab" aria-controls="abuso" aria-selected="false">ABUSO / ACOSO SEXUAL</button>
+                    <button class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]" id="abuso-tab" data-tabs-target="#abuso" type="button" role="tab" aria-controls="abuso" aria-selected="false">ABUSO / ACOSO SEXUAL</button>
                 </li>
                 <li class="mr-2" role="presentation">
-                    <button class="flex justify-center inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 " id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">ACCIDENTES LABORALES</button>
+                    <button class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] " id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">ACCIDENTES LABORALES</button>
                 </li>
                 <li role="presentation">
-                    <button class="justify-content: center inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">MORDEDURAS DE ANIMALES </button>
+                    <button class="justify-content: center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">MORDEDURAS DE ANIMALES </button>
                 </li>
             </ul>
         </div>
         <div id="myTabContent">
             <div class="rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div class="container grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
-                    <div class="row-span-1 flex justify-center">
+                <div class="container grid grid-cols-3 md:grid-cols-3 gap-4 items-center justify-center">
+                    <div class="col-span-1 flex justify-center">
                         <img class="h-full" src="assets/images/home/puerta.png" alt="" />
                     </div>
-                    <div class="row-span-1 text-center">
+                    <div class="col-span-2 text-center">
                         <h4 class="font-bold text-2xl  md:text-xl mb-4 text-[#193C3A] py-4">ACCIDENTES AUTOMOVILÍSTICOS</h4>
                         <!-- slider -->
                         <div class="text-[#255344] mx-4 md:mx-14 rounded-full flex items-center justify-center">
-                            <p class="text-justify mx-2 md:mx-14">
+                            <p class="text-justify text-base mx-2 md:mx-14">
                                 No importa dónde, ni cómo te hayan chocado, nosotros te conectamos con el mejor abogado
-                                para que obtengas el mayor apoyo legal y económico según las circunstancias.
-                                Los choques son eventos inesperados que interrumpen la paz cotidiana y estabilidad
-                                financiera, en especial cuando seres amados terminan en el hospital o, peor aún, cuando
-                                alguien fallece.
-                                <strong>$1,500,000.00</strong> a favor de la pareja.
+                                 para que obtengas el mayor apoyo legal y económico según las circunstancias.
+                                <br><br>
+                                Los choques son eventos inesperados que interrumpen la paz cotidiana y estabilidad 
+                                financiera, en especial cuando seres amados terminan en el hospital o, peor aún, cuando alguien fallece.
                             </p>
                         </div>
                         <!-- slider -->
@@ -285,18 +294,18 @@
             </div>
             <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="abuso" role="tabpanel" aria-labelledby="abuso-tab">
                 <div class="rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
-                        <div class="row-span-1 flex justify-center">
+                    <div class="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 items-center justify-center">
+                        <div class="col-span-1 flex justify-center">
                             <img class="h-full" src="assets/images/home/mano.png" alt="" />
                         </div>
-                        <div class="row-span-1 text-center">
+                        <div class="col-span-2 text-center">
                             <h4 class="font-bold text-2xl md:text-xl mb-4 text-[#193C3A]">ACOSO O ABUSO SEXUAL</h4>
                             <!-- slider -->
-                            <div class="text-[#193C3A] rounded-full flex items-center justify-center">
+                            <div class="text-[#255344] rounded-full flex items-center justify-center">
                                 <p class="text-justify mx-2 md:mx-14">
-                                    Sumamente doloroso y confidencial.
+                                    Sumamente doloroso y confidencial.<br>
                                     Desgraciadamente hay abuso en los lugares más cotidianos: escuelas, hospitales, iglesias, piscinas públicas, gimnasios, estudios de baile, grupos deportivos, etc.
-                                    <br>
+                                    <br><br>
                                     Nosotros te pondremos en contacto con abogados maestros en el tema que te guiarán por el complicadísimo proceso legal.
                                 </p>
                             </div>
@@ -305,18 +314,18 @@
                 </div>
             </div>
             <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
-                    <div class="row-span-1 flex justify-center">
+                <div class="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 items-center justify-center">
+                    <div class="col-span-1 flex justify-center">
                         <img class="h-full" src="assets/images/home/andadera.png" alt="" />
                     </div>
-                    <div class="row-span-1 text-center">
-                        <h4 class="font-bold text-2xl md:text-xl mb-4 text-[#193C3A]">ACCIDENTES AUTOMOVILÍSTICOS</h4>
+                    <div class="col-span-2 text-center">
+                        <h4 class="font-bold text-2xl md:text-xl mb-4 text-[#193C3A]">ACCIDENTES LABORALES</h4>
                         <!-- slider -->
-                        <div class= text-black rounded-full flex items-center justify-center">
+                        <div class= "text-[#255344] rounded-full flex items-center justify-center">
                             <p class="text-justify mx-2 md:mx-14">
-                                Sumamente doloroso y confidencial.
+                                Sumamente doloroso y confidencial.<br>
                                 Desgraciadamente hay abuso en los lugares más cotidianos: escuelas, hospitales, iglesias, piscinas públicas, gimnasios, estudios de baile, grupos deportivos, etc.
-                                <br>
+                                <br><br>
                                 Nosotros te pondremos en contacto con abogados maestros en el tema que te guiarán por el complicadísimo proceso legal.
                             </p>
                         </div>
@@ -325,14 +334,14 @@
                 </div>
             </div>
             <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
-                <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
-                    <div class="row-span-1 flex justify-center">
+                <div class="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 items-center justify-center">
+                    <div class="col-span-1 flex justify-center">
                         <img class="" src="assets/images/home/perro.png" alt="" />
                     </div>
-                    <div class="row-span-1 text-center">
+                    <div class="col-span-2 text-center">
                         <h4 class="font-bold text-2xl md:text-xl mb-4 text-[#193C3A]">MORDEDURAS DE ANIMALES</h4>
                         <!-- slider -->
-                        <div class="text-[#193C3A] rounded-full flex items-center justify-center">
+                        <div class="text-[#255344] rounded-full flex items-center justify-center">
                             <p class="text-justify mx-2 md:mx-14">
                                 Las mordeduras de perro pueden ocasionar lesiones graves y duraderas, resultando en posibles reclamos legales por parte
                                  de las víctimas. Es imperativo que los propietarios de perros reconozcan su responsabilidad en prevenir tales incidentes 
@@ -354,8 +363,8 @@
     <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
     <section class="bg-[#FCEDC9] text-[#193C3A] py-5">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center h-full justify-center">
-            <div id="abogados" class="row-span-1 text-center ">
-                <h4 class="text-4xl font-bold md:mb-4 text-xl font-bold mr-4">Podemos conectarte</h4>
+            <div id="abogados" class="row-span-1 py-4 text-center ">
+                <h4 class="text-4xl font-bold md:mb-4 text-xl font-bold mr-4"><br>Podemos conectarte</h4>
                 <h4 class="text-4xl font-bold md:mb-4 font-bold">con los mejores abogados</h4>
                 <!-- slider -->
                 <div>
@@ -378,8 +387,8 @@
                 </div>
                 <!-- slider -->
             </div>
-            <div class="row-span-1 absolute right-0 object-fill" >
-                <img class="h-590px; md:h lg:block" src="assets/images/home/martillo.png" alt="Imagen representativa" />
+            <div class="row-span-1 absolute right-0 object-fill" style="height: 720px;">
+                <img class="hidden sm:block lg:h-full md:hidden lg:block" src="assets/images/home/martillo.png" alt="Imagen representativa" />
             </div>
         </div>
     </section>
