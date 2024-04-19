@@ -68,30 +68,32 @@
         </div>
 
         </div>
-        <div class="bg-opacity-0 h-screen flex justify-center items-center">
-            <div class="grid md:grid-cols-3 gap-4 md:gap-8 xl:gap-10 md:items-center">
+        <div class="h-screen flex justify-center items-center">
+            <div class="py-10 grid md:grid-cols-2 gap-5 xl:gap-10">
                 <div>
                     <h1
-                        class="block text-9xl font-bold text-[#FCEDC9] sm:text-5xl lg:text-6xl lg:leading-tight text-[#FCEDC9]">
+                        class="px-10 block text-8xl font-semibold text-[#FCEDC9]">
                         SIN DUDAS
                     </h1>
                     <h1
-                        class="block text-9xl font-bold text-[#FCEDC9] sm:text-5xl lg:text-6xl lg:leading-tight text-[#FCEDC9]">
+                        class="px-10 block text-8xl font-semibold text-[#FCEDC9]">
                         NI DEUDAS
                     </h1>
                     <div class="mt-7 grid gap-3 w-full justify-center sm:inline-flex">
-                        <a class="py-3 px-4 w-36 inline-flex justify-around items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-[#FCEDC9] text-[#193C3A] hover:bg-[#193C3A] hover:text-[#FCEDC9] disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-60"
+                        <a class="py-3 px-4 w-36 inline-flex justify-around items-center gap-x-2 text-lg font-bold rounded-full border border-transparent bg-[#FCEDC9] text-[#193C3A] hover:bg-[#193C3A] hover:text-[#FCEDC9] disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-60"
                             href="#">
                             Consulta
                         </a>
                     </div>
                 </div>
             </div>
+        </div>   
     </header>
 
 
     <!-- Navbar Mobile -->
-    <nav class="bg-black text-white shadow-lg block md:hidden">
+    <nav class="bg-black text-white shadow-lg block md:hidden" 
+    style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
         <div class="container mx-auto flex items-center h-24">
             <a href="#" class="flex items-center justify-center">
                 <img class="h-16" src="assets/images/home/Logo.png" alt="Logo" />
@@ -133,6 +135,26 @@
                 </li>
             </ul>
         </div>
+        <div class="h-screen flex justify-center items-center">
+            <div class="py-10 grid md:grid-cols-2 gap-5 xl:gap-10">
+                <div>
+                    <h1
+                        class="px-10 block text-8xl font-semibold text-[#FCEDC9]">
+                        SIN DUDAS
+                    </h1>
+                    <h1
+                        class="px-10 block text-8xl font-semibold text-[#FCEDC9]">
+                        NI DEUDAS
+                    </h1>
+                    <div class="mt-7 grid gap-3 w-full justify-center sm:inline-flex">
+                        <a class="py-3 px-4 w-36 inline-flex justify-around items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-[#FCEDC9] text-[#193C3A] hover:bg-[#193C3A] hover:text-[#FCEDC9] disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-60"
+                            href="#">
+                            Consulta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>  
     </nav>
 
     <script>
@@ -168,8 +190,8 @@
     <!-- component -->
     <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
 
-    <div class="py-20 grid md:grid-cols-4 justify-items-center sm:grid-cols-1 ">
-        <div class="col-span-1 pt-20">
+    <div class="py-20 grid md:grid-cols-6 justify-items-center sm:grid-cols-1   ">
+        <div class="col-start-2 col-span-1 pt-20">
             <img src="assets/images/home/Frame 1.png" alt="">
             <article>
                 <h2 style="margin-left: 10px; ">
@@ -222,10 +244,10 @@
 
     <!-- This is an example component -->
     <div class="w-full mx-auto mb-4">
-        <div class="mt-7 border-gray-200 dark:border-gray-700 mb-4">
+        <div class="mt-7 border-[#183A38] dark:border-[#183A38] mb-4">
             <ul class="flex flex-wrap -mb-px justify-around" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                 <li class="mr-2" role="presentation">
-                    <button class="flex justify-center inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">ACCIDENTES AUTOMOVILÍSTICOS</button>
+                    <button class="flex justify-center inline-block text-[#183A38] hover:text-[#183A38] hover:border-[#183A38] rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-[#183A38] dark:hover:text-[#183A38] active" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">ACCIDENTES AUTOMOVILÍSTICOS</button>
                 </li>
                 <li class="mr-2" role="presentation">
                     <button class="flex justify-center inline-block text-red hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300" id="abuso-tab" data-tabs-target="#abuso" type="button" role="tab" aria-controls="abuso" aria-selected="false">ABUSO / ACOSO SEXUAL</button>
@@ -245,10 +267,10 @@
                         <img class="h-full" src="assets/images/home/puerta.png" alt="" />
                     </div>
                     <div class="row-span-1 text-center">
-                        <h4 class="text-2xl md:text-xl mb-4 text-[#193C3A] py-4">ACCIDENTES AUTOMOVILÍSTICOS</h4>
+                        <h4 class="font-bold text-2xl  md:text-xl mb-4 text-[#193C3A] py-4">ACCIDENTES AUTOMOVILÍSTICOS</h4>
                         <!-- slider -->
                         <div class="text-[#255344] mx-4 md:mx-14 rounded-full flex items-center justify-center">
-                            <p class="text-center mx-2 md:mx-14">
+                            <p class="text-justify mx-2 md:mx-14">
                                 No importa dónde, ni cómo te hayan chocado, nosotros te conectamos con el mejor abogado
                                 para que obtengas el mayor apoyo legal y económico según las circunstancias.
                                 Los choques son eventos inesperados que interrumpen la paz cotidiana y estabilidad
@@ -268,16 +290,16 @@
                             <img class="h-full" src="assets/images/home/mano.png" alt="" />
                         </div>
                         <div class="row-span-1 text-center">
-                            <h4 class="text-2xl md:text-xl mb-4 text-black">ACCIDENTES AUTOMOVILÍSTICOS</h4>
+                            <h4 class="font-bold text-2xl md:text-xl mb-4 text-[#193C3A]">ACOSO O ABUSO SEXUAL</h4>
                             <!-- slider -->
-                            <div class="text-black mx-4 md:mx-14 h-40 rounded-full flex items-center justify-center">
-                                <p class="text-center mx-2 md:mx-14">
-                                    Pareja fue arrollada por un conductor que iba distraída en su celular.
-                                    Obtuvimos
-                                    <strong>$4,500,000.00</strong> a favor de la pareja.
+                            <div class="text-[#193C3A] rounded-full flex items-center justify-center">
+                                <p class="text-justify mx-2 md:mx-14">
+                                    Sumamente doloroso y confidencial.
+                                    Desgraciadamente hay abuso en los lugares más cotidianos: escuelas, hospitales, iglesias, piscinas públicas, gimnasios, estudios de baile, grupos deportivos, etc.
+                                    <br>
+                                    Nosotros te pondremos en contacto con abogados maestros en el tema que te guiarán por el complicadísimo proceso legal.
                                 </p>
                             </div>
-                            <!-- slider -->
                         </div>
                     </div>
                 </div>
@@ -288,13 +310,14 @@
                         <img class="h-full" src="assets/images/home/andadera.png" alt="" />
                     </div>
                     <div class="row-span-1 text-center">
-                        <h4 class="text-2xl md:text-xl mb-4 text-black">ACCIDENTES AUTOMOVILÍSTICOS</h4>
+                        <h4 class="font-bold text-2xl md:text-xl mb-4 text-[#193C3A]">ACCIDENTES AUTOMOVILÍSTICOS</h4>
                         <!-- slider -->
-                        <div class="text-black mx-4 md:mx-14 h-40 rounded-full flex items-center justify-center">
-                            <p class="text-center mx-2 md:mx-14">
-                                Pareja fue arrollada por un conductor que iba distraída en su celular.
-                                Obtuvimos
-                                <strong>$4,500,000.00</strong> a favor de la pareja.
+                        <div class= text-black rounded-full flex items-center justify-center">
+                            <p class="text-justify mx-2 md:mx-14">
+                                Sumamente doloroso y confidencial.
+                                Desgraciadamente hay abuso en los lugares más cotidianos: escuelas, hospitales, iglesias, piscinas públicas, gimnasios, estudios de baile, grupos deportivos, etc.
+                                <br>
+                                Nosotros te pondremos en contacto con abogados maestros en el tema que te guiarán por el complicadísimo proceso legal.
                             </p>
                         </div>
                         <!-- slider -->
@@ -303,17 +326,22 @@
             </div>
             <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
                 <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
-                    <div class="row-span-1 flex justify-center h-1/3">
+                    <div class="row-span-1 flex justify-center">
                         <img class="" src="assets/images/home/perro.png" alt="" />
                     </div>
                     <div class="row-span-1 text-center">
-                        <h4 class="text-2xl md:text-xl mb-4 text-black py-10 px-10">ACCIDENTES AUTOMOVILÍSTICOS</h4>
+                        <h4 class="font-bold text-2xl md:text-xl mb-4 text-[#193C3A]">MORDEDURAS DE ANIMALES</h4>
                         <!-- slider -->
-                        <div class="text-black mx-4 md:mx-14 h-40 rounded-full flex items-center justify-center">
-                            <p class="text-center mx-2 md:mx-14">
-                                Pareja fue arrollada por un conductor que iba distraída en su celular.
-                                Obtuvimos
-                                <strong>$4,500,000.00</strong> a favor de la pareja.
+                        <div class="text-[#193C3A] rounded-full flex items-center justify-center">
+                            <p class="text-justify mx-2 md:mx-14">
+                                Las mordeduras de perro pueden ocasionar lesiones graves y duraderas, resultando en posibles reclamos legales por parte
+                                 de las víctimas. Es imperativo que los propietarios de perros reconozcan su responsabilidad en prevenir tales incidentes 
+                                 y tomar medidas adecuadas para evitarlos. En caso de que un perro cause daño físico o emocional a una persona, 
+                                 los afectados pueden tener derecho a buscar compensación por los daños sufridos, incluidas las facturas médicas, 
+                                 el dolor y el sufrimiento, y otras pérdidas relacionadas. Por tanto, es fundamental que los dueños de mascotas actúen 
+                                 con prudencia y cumplan con todas las regulaciones locales y leyes de responsabilidad civil aplicables para garantizar 
+                                 la seguridad de las personas en su entorno.
+
                             </p>
                         </div>
                         <!-- slider -->
@@ -350,8 +378,8 @@
                 </div>
                 <!-- slider -->
             </div>
-            <div class="row-span-1 absolute right-0 object-fill" style="height: 590px;">
-                <img class="hidden md:block" src="assets/images/home/martillo.png" alt="Imagen representativa" />
+            <div class="row-span-1 absolute right-0 object-fill" >
+                <img class="h-590px; md:h lg:block" src="assets/images/home/martillo.png" alt="Imagen representativa" />
             </div>
         </div>
     </section>
@@ -411,7 +439,7 @@
                 <!-- Social media icons container -->
                 <div class="mb-6 flex justify-center space-x-2">
                   <a
-                    href="#!"
+                    href="https://www.facebook.com/profile.php?id=61556945993261&mibextid=LQQJ4d"
                     type="button"
                     class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
                     data-twe-ripple-init>
@@ -428,7 +456,7 @@
                   </a>
             
                   <a
-                    href="#!"
+                    href="https://www.instagram.com/grupoleal.us?igsh=MzRlODBiNWFlZA=="
                     type="button"
                     class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
                     data-twe-ripple-init>

@@ -16,7 +16,7 @@
   <header class="bg-[#FCEDC9] hidden md:block py-10"
   style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
   <div class="container mx-auto flex items-center h-24 justify-between py-10">
-      <a class="logo mr-auto" style="margin: 0 auto;">
+      <a href="index.html" class="logo mr-auto" style="margin: 0 auto;">
           <img class="h-18" src="../assets/images/home/logoverde.png" alt="index.html" />
       </a>
       <nav class="navbar contents font-semibold text-base lg:text-lg text-[#193C3A]">
@@ -32,7 +32,7 @@
                   </a>
               </li>
               <li class="p-5 xl:p-8" class="hover: text-[#5D7F7B]">
-                  <a href="pages/gallery.html">
+                  <a href="pages/gallery.html" class="hover: text-[#5D7F7B]">
                       <span>Galeria</span>
                   </a>
               </li>
@@ -57,6 +57,63 @@
 
   </div>
 </header>
+
+<nav class="bg-black text-white shadow-lg block md:hidden" 
+style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
+    <div class="container mx-auto flex items-center h-24">
+        <a href="#" class="flex items-center justify-center">
+            <img class="h-16" src="../assets/images/home/Logo.png" alt="Logo" />
+        </a>
+        <button id="mobile-menu-button" class="ml-auto mr-4 focus:outline-none">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+    <div id="mobile-menu-container" class="hidden md:hidden"> <!-- Cambiado a "md:hidden" para mostrar en dispositivos móviles -->
+        <ul class="mx-auto flex flex-col items-start">
+            <li class="p-5 xl:p-8 active">
+                <a href="#">
+                    <span>Areas de especialidad</span>
+                </a>
+            </li>
+            <li class="p-5 xl:p-8">
+                <a href="pages/gallery.html">
+                    <span>Galeria</span>
+                </a>
+            </li>
+            <li class="p-5 xl:p-8">
+                <a href="pages/casos.html">
+                    <span>Casos</span>
+                </a>
+            </li>
+            <li class="p-5 xl:p-8">
+                <a href="#abogados">
+                    <span>Acerca de nosotros</span>
+                </a>
+            </li>
+            <li class="p-5 xl:p-8">
+                <a href="pages/contactanos.html">
+                    <span>Contáctanos</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuContainer = document.getElementById('mobile-menu-container');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenuContainer.classList.toggle('hidden');
+        });
+    });
+</script>
+<!-- fin de mobile navbar -->
 
 <section class="my-10">
   <h2 class="carousel-3D-swiper-title text-[#193C3A]">Galeria</h2>

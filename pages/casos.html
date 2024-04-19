@@ -19,18 +19,18 @@
 
     <header class="hidden md:block">
         <div class="container mx-auto flex items-center h-40 justify-between">
-            <a class="logo mr-auto" >
-                <img class="h-24" src="../assets/images/casos/Logo.png" alt="index.html" />
+            <a href="index.html" class="logo mr-auto">
+                <img class="h-24 px-5 justify-start" src="../assets/images/casos/Logo.png" alt="../index.html" href="../index.html"/>
             </a>
-            <nav class="navbar contents font-semibold text-base lg:text-lg text-[#193C3A]">
-                <ul class="mx-auto flex items-start">
+            <nav class="navbar contents font-semibold text-base lg:text-lg text-[#193C3A] hover:text-red">
+                <ul class="mx-auto flex items-start font-bold">
                     <li class="p-5 xl:p-8 active">
                         <a href="../index.html">
                             <span>Inicio</span>
                         </a>
                     </li>
                     <li class="p-5 xl:p-8 active">
-                        <a href="">
+                        <a href="../index.html">
                             <span>Areas de especialidad</span>
                         </a>
                     </li>
@@ -40,7 +40,7 @@
                         </a>
                     </li>
                     <li class="p-5 xl:p-8">
-                        <a href="../pages/casos.html">
+                        <a href="../pages/casos.html" class="hover: text-[#5D7F7B]">
                             <span>Casos</span>
                         </a>
                     </li>
@@ -50,7 +50,7 @@
                         </a>
                     </li>
                     <li class="p-5 xl:p-8">
-                        <a href="../pages/contactanos.html">
+                        <a href="../pages/contactanos.html" >
                             <span>Contáctanos</span>
                         </a>
                     </li>
@@ -59,14 +59,13 @@
         </div>
     </header>
 
-    <!-- Navbar Mobile -->
-    <nav class="bg-black text-white shadow-lg block md:hidden">
+    <nav class="bg-black text-white shadow-lg block md:hidden" 
+    style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
         <div class="container mx-auto flex items-center h-24">
-            <a href="" class="flex items-center justify-center">
-                <img class="h-16" src="https://i.ibb.co/6Yxs70d/2021-10-26-23h27-03.png" alt="" />
-                <span class="ml-4 uppercase font-black">clara<br />thella</span>
+            <a href="#" class="flex items-center justify-center">
+                <img class="h-16" src="../assets/images/home/Logo.png" alt="Logo" />
             </a>
-            <button class="ml-auto mr-4 focus:outline-none">
+            <button id="mobile-menu-button" class="ml-auto mr-4 focus:outline-none">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
@@ -74,40 +73,51 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden">
-            <ul class="mt-4">
-                <li class="p-4">
-                    <a href="">
-                        <span>Home</span>
+        <div id="mobile-menu-container" class="hidden md:hidden"> <!-- Cambiado a "md:hidden" para mostrar en dispositivos móviles -->
+            <ul class="mx-auto flex flex-col items-start">
+                <li class="p-5 xl:p-8 active">
+                    <a href="#">
+                        <span>Areas de especialidad</span>
                     </a>
                 </li>
-                <li class="p-4">
-                    <a href="">
-                        <span>About</span>
+                <li class="p-5 xl:p-8">
+                    <a href="pages/gallery.html">
+                        <span>Galeria</span>
                     </a>
                 </li>
-                <li class="p-4">
-                    <a href="">
-                        <span>Projects</span>
+                <li class="p-5 xl:p-8">
+                    <a href="pages/casos.html">
+                        <span>Casos</span>
                     </a>
                 </li>
-                <li class="p-4">
-                    <a href="">
-                        <span>Services</span>
+                <li class="p-5 xl:p-8">
+                    <a href="#abogados">
+                        <span>Acerca de nosotros</span>
                     </a>
                 </li>
-                <li class="p-4">
-                    <a href="">
-                        <span>Blog</span>
+                <li class="p-5 xl:p-8">
+                    <a href="pages/contactanos.html">
+                        <span>Contáctanos</span>
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenuContainer = document.getElementById('mobile-menu-container');
+    
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenuContainer.classList.toggle('hidden');
+            });
+        });
+    </script>
     <!-- fin de mobile navbar -->
 
     <!-- Hero Color -->
-    <section style="background-image: url(../assets/images/contactanos/pantalla.jpg); background-position: center; background-size: cover;" class="bg-[#254644] text-white py-20 ">
+    <section class="bg-[#254644] text-white py-20 ">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center h-full justify-center">
             <div class="row-span-1 text-center">
                 <h4 class="text-2xl md:text-xl mb-4">TRABAJADORES</h4>
