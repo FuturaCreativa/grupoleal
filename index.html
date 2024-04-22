@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
 </head>
 
@@ -254,10 +255,10 @@
 
     <!-- This is an example component -->
     <div class="w-full mx-auto mb-4">
-        <div class="mt-7 border-[#255344] dark:border-[#255344] mb-4">
-            <ul class="flex flex-wrap -mb-px justify-around" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+        <div class="mt-7 border-[#255344] dark:border-[#ffff] mb-4">
+            <ul class="flex flex-wrap -mb-px justify-around" id="myTab" data-tabs-toggle="#myTabContent" role="tablist"  data-tabs-active-classes="text-red hover:text-red dark:text-red dark:hover:text-green-900 border-green-900 dark:border-red">
                 <li class="mr-2" role="presentation">
-                    <button class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344] active" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">ACCIDENTES AUTOMOVILÍSTICOS</button>
+                    <button class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]" id="profile-tab" data-tabs-target="#profile"  type="button" role="tab" aria-controls="profile" aria-selected="true" >ACCIDENTES AUTOMOVILÍSTICOS</button>
                 </li>
                 <li class="mr-2" role="presentation">
                     <button class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]" id="abuso-tab" data-tabs-target="#abuso" type="button" role="tab" aria-controls="abuso" aria-selected="false">ABUSO / ACOSO SEXUAL</button>
@@ -360,7 +361,7 @@
         </div>
     </div>
     
-    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <section class="bg-[#FCEDC9] text-[#193C3A] py-5">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center h-full justify-center">
             <div id="abogados" class="row-span-1 py-4 text-center ">
