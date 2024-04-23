@@ -2,23 +2,24 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Galeria</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css'>
-  <link rel='stylesheet' href='https://www.unpkg.com/browse/tailwindcss@2.2.19/dist/tailwind.min.css'>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <meta charset="UTF-8">
+    <title>Galeria</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css'>
+    <link rel='stylesheet' href='https://www.unpkg.com/browse/tailwindcss@2.2.19/dist/tailwind.min.css'>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
 
 </head>
 
 <body>
-     <!-- Navbar -->
+    <!-- Navbar -->
 
-     <header class="hidden md:block bg-[#FCEDC9]">
+    <header class="bg-[#FCEDC9] hidden md:block py-10">
         <div class="container mx-auto flex items-center h-40 justify-between">
             <a href="index.html" class="logo mr-auto">
-                <img class="h-24 px-5 justify-start" src="../assets/images/casos/Logo.png" alt="../index.html" href="../index.html"/>
+                <img class="h-24 px-5 justify-start" src="../assets/images/casos/Logo.png" alt="../index.html"
+                    href="../index.html" />
             </a>
             <nav class="navbar contents font-semibold text-base lg:text-lg text-[#193C3A] hover:text-red">
                 <ul class="mx-auto flex items-start font-bold">
@@ -38,7 +39,7 @@
                         </a>
                     </li>
                     <li class="p-5 xl:p-8">
-                        <a href="../pages/casos.html" >
+                        <a href="../pages/casos.html">
                             <span>Casos</span>
                         </a>
                     </li>
@@ -48,7 +49,7 @@
                         </a>
                     </li>
                     <li class="p-5 xl:p-8">
-                        <a href="../pages/contactanos.html" >
+                        <a href="../pages/contactanos.html">
                             <span>Contáctanos</span>
                         </a>
                     </li>
@@ -57,8 +58,8 @@
         </div>
     </header>
 
-    <nav class="bg-black text-white shadow-lg block md:hidden" 
-    style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
+    <nav class="bg-black text-white shadow-lg block md:hidden"
+        style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
         <div class="container mx-auto flex items-center h-24">
             <a href="#" class="flex items-center justify-center">
                 <img class="h-16" src="../assets/images/home/Logo.png" alt="Logo" />
@@ -71,7 +72,8 @@
                 </svg>
             </button>
         </div>
-        <div id="mobile-menu-container" class="hidden md:hidden"> <!-- Cambiado a "md:hidden" para mostrar en dispositivos móviles -->
+        <div id="mobile-menu-container" class="hidden md:hidden">
+            <!-- Cambiado a "md:hidden" para mostrar en dispositivos móviles -->
             <ul class="mx-auto flex flex-col items-start">
                 <li class="p-5 xl:p-8 active">
                     <a href="#">
@@ -103,152 +105,125 @@
     </nav>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenuContainer = document.getElementById('mobile-menu-container');
-    
-            mobileMenuButton.addEventListener('click', function() {
+
+            mobileMenuButton.addEventListener('click', function () {
                 mobileMenuContainer.classList.toggle('hidden');
             });
         });
     </script>
     <!-- fin de mobile navbar -->
-<section class="my-10">
-  <h2 class="carousel-3D-swiper-title text-[#193C3A]">Galeria</h2>
-  <section class="carousel-3D-swiper-section">
-      <!-- Slider main container -->
-      <div class="carousel-3D-swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper" style="max-width: 1200px;">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                  <div class="image-wrapper aspect-video">
-                      <video class="aspect-video" controls>
-                          <source src="../assets/video/Video1.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                      </video>
-                  </div>
-                  <div class="details">
-                      <h3>Lorem ipsum dolor</h3>
-                      <span>Web Designer</span>
-                      <p>Lorem ipsum dolor</p>
-                  </div>
-              </div>
-              <!-- Other slides with video -->
-              <div class="swiper-slide">
-                <div class="image-wrapper aspect-video">
-                    <video class="aspect-video" controls>
-                        <source src="../assets/video/Video2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="details">
-                    <h3>Lorem ipsum dolor</h3>
-                    <span>Web Designer</span>
-                    <p>Lorem ipsum dolor</p>
-                </div>
-            </div>
-            <!-- Other slides with video -->
-                          <!-- Other slides with video -->
-                          <div class="swiper-slide">
-                            <div class="image-wrapper aspect-video">
-                                <video class="aspect-video" controls>
-                                    <source src="../assets/video/video3.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="details">
+    <section class="my-10 hidden md:block py-10">
+        <h2 class="carousel-3D-swiper-title text-[#193C3A]">Galeria</h2>
+        <section class="carousel-3D-swiper-section">
+            <!-- Slider main container -->
+            <div class="carousel-3D-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper" style="max-width: 1200px;">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="image-wrapper aspect-video">
+                            <video class="aspect-video" controls>
+                                <source src="../assets/video/Video1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <!-- Other slides with video -->
+                    <div class="swiper-slide">
+                        <div class="image-wrapper aspect-video">
+                            <video class="aspect-video" controls>
+                                <source src="../assets/video/Video2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <!-- Other slides with video -->
+                    <!-- Other slides with video -->
+                    <div class="swiper-slide">
+                        <div class="image-wrapper aspect-video">
+                            <video class="aspect-video" controls>
+                                <source src="../assets/video/video3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                         <!-- Other slides with video -->
-          </div>
-          <!-- pagination -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination" style="bottom: -50px;"></div>
-      </div>
-  </section>
-</section>
-</section><section class="my-10">
-
-  <footer class="flex flex-col items-center bg-[#193C3A] text-center text-surface dark:bg-[#193C3A] dark:text-white">
-    <div class="container mx-auto grid grid-cols-3 gap-4 pt-9">
-        <!-- Logo container -->
-        <div class="flex items-center justify-center">
-            <img src="../assets/images/home/logob.png" alt="Logo">
-        </div>
-
-        <!-- Texto y iconos de redes sociales -->
-        <div class="flex flex-col items-center justify-center space-y-2">
-            <!-- Texto encima de los iconos -->
-            <p class="text-white"><strong>LEGAL SERVICES</strong> <br>1324 N Broadway Santa Ana CA 92660 <br> 714-560-7251 - Info@Grupoleal.us</p>
-
-            <!-- Iconos de redes sociales -->
-            <div class="container">
-                <!-- Social media icons container -->
-                <div class="mb-6 flex justify-center space-x-2">
-                  <a
-                    href="#!"
-                    type="button"
-                    class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
-                    data-twe-ripple-init>
-                    <span class="[&>svg]:h-5 [&>svg]:w-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 320 512">
-                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-                        <path
-                          d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
-                      </svg>
-                    </span>
-                  </a>
-            
-                  <a
-                    href="#!"
-                    type="button"
-                    class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
-                    data-twe-ripple-init>
-                    <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 448 512">
-                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-                        <path
-                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                      </svg>
-                    </span>
-                  </a>
-            
-                  <a
-                    href="#!"
-                    type="button"
-                    class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
-                    data-twe-ripple-init>
-                    <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 448 512">
-                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-                        <path
-                          d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
-                      </svg>
-                    </span>
-                  </a>
+                    </div>
+                    <!-- pagination -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination" style="bottom: -50px;"></div>
                 </div>
-              </div>
-    </div>
-            <!-- Texto de derechos de autor -->
-            <div class="flex items-center justify-center">
-                <p class="text-white">INGLES / ESPAÑOL</p>
-            </div>
-</footer>
+        </section>
+    </section>
+
+        <footer
+            class="flex flex-col items-center bg-[#193C3A] text-center text-surface dark:bg-[#193C3A] dark:text-white">
+            <div class="container mx-auto grid grid-cols-3 gap-4 pt-9">
+                <!-- Logo container -->
+                <div class="flex items-center justify-center">
+                    <img src="../assets/images/home/logob.png" alt="Logo">
+                </div>
+
+                <!-- Texto y iconos de redes sociales -->
+                <div class="flex flex-col items-center justify-center space-y-2">
+                    <!-- Texto encima de los iconos -->
+                    <p class="text-white"><strong>LEGAL SERVICES</strong> <br>1324 N Broadway Santa Ana CA 92660 <br>
+                        714-560-7251 - Info@Grupoleal.us</p>
+
+                    <!-- Iconos de redes sociales -->
+                    <div class="container">
+                        <!-- Social media icons container -->
+                        <div class="mb-6 flex justify-center space-x-2">
+                            <a href="#!" type="button"
+                                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+                                data-twe-ripple-init>
+                                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
+                                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                        <path
+                                            d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <a href="#!" type="button"
+                                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+                                data-twe-ripple-init>
+                                <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                        <path
+                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <a href="#!" type="button"
+                                class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+                                data-twe-ripple-init>
+                                <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                        <path
+                                            d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Texto de derechos de autor -->
+                <div class="flex items-center justify-center">
+                    <p class="text-white">INGLES / ESPAÑOL</p>
+                </div>
+        </footer>
 
 </body>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js'></script>
+<script src="../assets/js/script.js"></script>
 </html>
-  <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js'></script>
-  <script src="../assets/js/script.js"></script>
-
+<!-- partial -->
