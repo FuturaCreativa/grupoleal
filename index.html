@@ -21,9 +21,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
+    <style>
+        /* Ocultar el cuadro de Google Translate */
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+            visibility: hidden;
+        }
+            /* Estilos para los botones */
+    .translate-button {
+      color: #fcedc9;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      opacity: 0.5;
+      font-size: 18px;
+      padding:3px;
+    }
+
+    .VIpgJd-ZVi9od-ORHb-OEVmcd {
+    	display: none !important;
+        visibility: hidden !important;
+    }
+
+    </style>
+
 </head>
 
 <body>
+
     <!-- Navbar -->
 
     <header class="bg-[#193C3A] hidden md:block py-10"
@@ -72,15 +97,13 @@
         <div class="h-screen flex justify-center items-center">
             <div class="py-10 grid md:grid-cols-2 gap-5">
                 <div>
-                    <h1
-                        class="px-10 md:text-8xl font-semibold text-[#FCEDC9] ">
+                    <h1 class="px-10 md:text-8xl font-semibold text-[#FCEDC9] ">
                         SIN DUDAS
                     </h1>
                     <div>
-                        
+
                     </div>
-                    <h1
-                        class="px-10 text-8xl font-semibold text-[#FCEDC9]">
+                    <h1 class="px-10 text-8xl font-semibold text-[#FCEDC9]">
                         NI DEUDAS
                     </h1>
                     <div class="mt-7 grid gap-3 w-full justify-center sm:inline-flex">
@@ -91,18 +114,20 @@
                     </div>
                 </div>
             </div>
-        </div>   
+        </div>
         <div class="">
+            <div id="google_translate_element" style="display:none;"></div>
             <div class="px-4 flex items-center justify-end">
-                <p class="text-white">INGLES / ESPAÑOL</p>
+                <button id="en-button" class="translate-button notranslate text-[#5D7F7B]" onclick="changeLanguage('en')">INGLES</button>
+                <button id="es-button" class="translate-button notranslate text-[#193C3A]" onclick="changeLanguage('es')">ESPAÑOL</button>              
             </div>
         </div>
     </header>
 
 
     <!-- Navbar Mobile -->
-    <nav class="bg-black text-white shadow-lg block md:hidden" 
-    style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
+    <nav class="bg-black text-white shadow-lg block md:hidden"
+        style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
         <div class="container mx-auto flex items-center h-24">
             <a href="#" class="flex items-center justify-center">
                 <img class="h-16" src="assets/images/home/Logo.png" alt="Logo" />
@@ -115,7 +140,8 @@
                 </svg>
             </button>
         </div>
-        <div id="mobile-menu-container" class="hidden md:hidden"> <!-- Cambiado a "md:hidden" para mostrar en dispositivos móviles -->
+        <div id="mobile-menu-container" class="hidden md:hidden">
+            <!-- Cambiado a "md:hidden" para mostrar en dispositivos móviles -->
             <ul class="mx-auto flex flex-col items-start">
                 <li class="p-5 xl:p-8 active">
                     <a href="#">
@@ -147,12 +173,10 @@
         <div class="h-screen flex justify-center items-center">
             <div class="py-10 grid md:grid-cols-2 gap-5 xl:gap-10">
                 <div>
-                    <h1
-                        class="px-10 block text-5xl font-semibold text-[#FCEDC9]">
+                    <h1 class="px-10 block text-5xl font-semibold text-[#FCEDC9]">
                         SIN DUDAS
                     </h1>
-                    <h1
-                        class="px-10 block text-5xl font-semibold text-[#FCEDC9]">
+                    <h1 class="px-10 block text-5xl font-semibold text-[#FCEDC9]">
                         NI DEUDAS
                     </h1>
                     <div class="mt-7 grid gap-3 w-full justify-center sm:inline-flex">
@@ -163,15 +187,15 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </nav>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenuContainer = document.getElementById('mobile-menu-container');
-    
-            mobileMenuButton.addEventListener('click', function() {
+
+            mobileMenuButton.addEventListener('click', function () {
                 mobileMenuContainer.classList.toggle('hidden');
             });
         });
@@ -184,7 +208,8 @@
 
     <!-- Hero Color -->
     <section class="bg-[#193C3A] text-white">
-        <div class="h-[35rem] px-10 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
+        <div
+            class="h-[35rem] px-10 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center">
             <div class="px-10 row-span-1 text-center">
                 <h2 class="text-4xl"> <strong>ANTES QUE ABOGADOS</strong> </h2>
                 <h3 class="text-4xl"><strong>SOMOS HUMANOS</strong></h3>
@@ -195,7 +220,8 @@
                 </p>
             </div>
             <div class="row-span-1 absolute right-4 justify-center max-w-screen-xl ">
-                <img class="hidden md:block container mx-auto items-center justify-center" src="assets/images/home/balanza.png" alt="" style="height: 750px;" />
+                <img class="hidden md:block container mx-auto items-center justify-center"
+                    src="assets/images/home/balanza.png" alt="" style="height: 750px;" />
             </div>
         </div>
     </section>
@@ -268,47 +294,63 @@
     <!-- This is an example component -->
     <div class="w-full mx-auto mb-4">
         <div class="mt-7 border-[#255344] dark:border-[#ffff] mb-4">
-            <ul class="flex flex-wrap -mb-px justify-around" id="myTab" data-tabs-toggle="#myTabContent" role="tablist"  data-tabs-active-classes="text-red hover:text-red dark:text-red dark:hover:text-green-900 border-green-900 dark:border-red">
+            <ul class="flex flex-wrap -mb-px justify-around" id="myTab" data-tabs-toggle="#myTabContent" role="tablist"
+                data-tabs-active-classes="text-red hover:text-red dark:text-red dark:hover:text-green-900 border-green-900 dark:border-red">
                 <li class="mr-2" role="presentation">
-                    <button class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]" id="profile-tab" data-tabs-target="#profile"  type="button" role="tab" aria-controls="profile" aria-selected="true" >ACCIDENTES AUTOMOVILÍSTICOS</button>
+                    <button
+                        class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]"
+                        id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
+                        aria-selected="true">ACCIDENTES AUTOMOVILÍSTICOS</button>
                 </li>
                 <li class="mr-2" role="presentation">
-                    <button class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]" id="abuso-tab" data-tabs-target="#abuso" type="button" role="tab" aria-controls="abuso" aria-selected="false">ABUSO / ACOSO SEXUAL</button>
+                    <button
+                        class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]"
+                        id="abuso-tab" data-tabs-target="#abuso" type="button" role="tab" aria-controls="abuso"
+                        aria-selected="false">ABUSO / ACOSO SEXUAL</button>
                 </li>
                 <li class="mr-2" role="presentation">
-                    <button class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] " id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">ACCIDENTES LABORALES</button>
+                    <button
+                        class="flex justify-center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] "
+                        id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
+                        aria-selected="false">ACCIDENTES LABORALES</button>
                 </li>
                 <li role="presentation">
-                    <button class="justify-content: center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">MORDEDURAS DE ANIMALES </button>
+                    <button
+                        class="justify-content: center inline-block text-[#255344] hover:text-[#255344] hover:border-[#255344] rounded-t-lg py-4 px-4 text-sm font-bold text-center border-transparent border-b-2 dark:text-[#255344] dark:hover:text-[#255344]"
+                        id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts"
+                        aria-selected="false">MORDEDURAS DE ANIMALES </button>
                 </li>
             </ul>
         </div>
         <div id="myTabContent">
             <div class="rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 <div class="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 items-center justify-center">
-                    <div class="col-span-1 flex justify-center">
+                    <div class="md:block col-span-1 flex justify-center">
                         <img class="h-full" src="assets/images/home/puerta.png" alt="" />
                     </div>
                     <div class="col-span-2 text-center">
-                        <h4 class="font-bold text-2xl  md:text-xl mb-4 text-[#193C3A] py-4">ACCIDENTES AUTOMOVILÍSTICOS</h4>
+                        <h4 class="font-bold text-2xl  md:text-xl mb-4 text-[#193C3A] py-4">ACCIDENTES AUTOMOVILÍSTICOS
+                        </h4>
                         <!-- slider -->
                         <div class="text-[#255344] mx-4 md:mx-14 rounded-full flex items-center justify-center">
                             <p class="text-justify text-base mx-2 md:mx-14">
                                 No importa dónde, ni cómo te hayan chocado, nosotros te conectamos con el mejor abogado
-                                 para que obtengas el mayor apoyo legal y económico según las circunstancias.
+                                para que obtengas el mayor apoyo legal y económico según las circunstancias.
                                 <br><br>
-                                Los choques son eventos inesperados que interrumpen la paz cotidiana y estabilidad 
-                                financiera, en especial cuando seres amados terminan en el hospital o, peor aún, cuando alguien fallece.
+                                Los choques son eventos inesperados que interrumpen la paz cotidiana y estabilidad
+                                financiera, en especial cuando seres amados terminan en el hospital o, peor aún, cuando
+                                alguien fallece.
                             </p>
                         </div>
                         <!-- slider -->
                     </div>
                 </div>
             </div>
-            <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="abuso" role="tabpanel" aria-labelledby="abuso-tab">
+            <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="abuso" role="tabpanel"
+                aria-labelledby="abuso-tab">
                 <div class="rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <div class="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 items-center justify-center">
-                        <div class="col-span-1 flex justify-center">
+                        <div class="hidden md:block col-span-1 flex justify-center">
                             <img class="h-full" src="assets/images/home/mano.png" alt="" />
                         </div>
                         <div class="col-span-2 text-center">
@@ -317,35 +359,41 @@
                             <div class="text-[#255344] rounded-full flex items-center justify-center">
                                 <p class="text-justify mx-2 md:mx-14">
                                     Sumamente doloroso y confidencial.<br>
-                                    Desgraciadamente hay abuso en los lugares más cotidianos:escuelas, hospitales, iglesias, piscinas públicas, gimnasios, estudios de baile, grupos deportivos, etc.
+                                    Desgraciadamente hay abuso en los lugares más cotidianos:escuelas, hospitales,
+                                    iglesias, piscinas públicas, gimnasios, estudios de baile, grupos deportivos, etc.
                                     <br><br>
-                                    Nosotros te pondremos en contacto con abogados maestros en el tema que te guiarán por el complicadísimo proceso legal.
+                                    Nosotros te pondremos en contacto con abogados maestros en el tema que te guiarán
+                                    por el complicadísimo proceso legal.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+            <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="settings" role="tabpanel"
+                aria-labelledby="settings-tab">
                 <div class="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 items-center justify-center">
-                    <div class="col-span-1 flex justify-center">
+                    <div class="hidden md:block col-span-1 flex justify-center">
                         <img class="h-full" src="assets/images/home/andadera.png" alt="" />
                     </div>
                     <div class="col-span-2 text-center">
                         <h4 class="font-bold text-2xl md:text-xl mb-4 text-[#193C3A]">ACCIDENTES LABORALES</h4>
                         <!-- slider -->
-                        <div class= "text-[#255344] rounded-full flex items-center justify-center">
+                        <div class="text-[#255344] rounded-full flex items-center justify-center">
                             <p class="text-justify mx-2 md:mx-14">
-                                El trabajo pesado es trabajo peligroso, pero qué pasa cuando las cosas salen mal y el afectado eres tú. ¿Preguntas? Marca 714-560-7251<br>
-                                No importa cómo te hayas lastimado, si estabas trabajando, tienes derechos y nosotros conocemos al mejor grupo legal que te pueda ayudar.                            </p>
+                                El trabajo pesado es trabajo peligroso, pero qué pasa cuando las cosas salen mal y el
+                                afectado eres tú. ¿Preguntas? Marca 714-560-7251<br>
+                                No importa cómo te hayas lastimado, si estabas trabajando, tienes derechos y nosotros
+                                conocemos al mejor grupo legal que te pueda ayudar. </p>
                         </div>
                         <!-- slider -->
                     </div>
                 </div>
             </div>
-            <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+            <div class="bg-white p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts" role="tabpanel"
+                aria-labelledby="contacts-tab">
                 <div class="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 items-center justify-center">
-                    <div class="col-span-1 flex justify-center">
+                    <div class="hidden md:block col-span-1 flex justify-center">
                         <img class="" src="assets/images/home/perro.png" alt="" />
                     </div>
                     <div class="col-span-2 text-center">
@@ -353,13 +401,19 @@
                         <!-- slider -->
                         <div class="text-[#255344] rounded-full flex items-center justify-center">
                             <p class="text-justify mx-2 md:mx-14">
-                                Las mordeduras de perro pueden ocasionar lesiones graves y duraderas, resultando en posibles reclamos legales por parte
-                                 de las víctimas. Es imperativo que los propietarios de perros reconozcan su responsabilidad en prevenir tales incidentes 
-                                 y tomar medidas adecuadas para evitarlos. En caso de que un perro cause daño físico o emocional a una persona, 
-                                 los afectados pueden tener derecho a buscar compensación por los daños sufridos, incluidas las facturas médicas, 
-                                 el dolor y el sufrimiento, y otras pérdidas relacionadas. Por tanto, es fundamental que los dueños de mascotas actúen 
-                                 con prudencia y cumplan con todas las regulaciones locales y leyes de responsabilidad civil aplicables para garantizar 
-                                 la seguridad de las personas en su entorno.
+                                Las mordeduras de perro pueden ocasionar lesiones graves y duraderas, resultando en
+                                posibles reclamos legales por parte
+                                de las víctimas. Es imperativo que los propietarios de perros reconozcan su
+                                responsabilidad en prevenir tales incidentes
+                                y tomar medidas adecuadas para evitarlos. En caso de que un perro cause daño físico o
+                                emocional a una persona,
+                                los afectados pueden tener derecho a buscar compensación por los daños sufridos,
+                                incluidas las facturas médicas,
+                                el dolor y el sufrimiento, y otras pérdidas relacionadas. Por tanto, es fundamental que
+                                los dueños de mascotas actúen
+                                con prudencia y cumplan con todas las regulaciones locales y leyes de responsabilidad
+                                civil aplicables para garantizar
+                                la seguridad de las personas en su entorno.
 
                             </p>
                         </div>
@@ -369,7 +423,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <section class="bg-[#FCEDC9] text-[#193C3A] py-5">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center h-full justify-center">
@@ -380,7 +434,8 @@
                 <div>
                     <div>
                         <div class="text-[#255344] flex items-center justify-center md:justify-start">
-                            <p class="flex justify-center md:justify-start text-justify text-[#255344] font-medium text-lg px-10 py-5">
+                            <p
+                                class="flex justify-center md:justify-start text-justify text-[#255344] font-medium text-lg px-10 py-5">
                                 Te conectaremos con el abogado adecuado para manejar tu caso de lesiones personales.
                                 <br><br>
                                 Los casos de lesiones personales son algunos de los asuntos legales más estresantes y
@@ -397,13 +452,14 @@
                 <!-- slider -->
             </div>
             <div class="hidden lg:block py-24 row-span-1 right-0 object-fill md:static lg:absolute">
-                <img class="mx-auto md:w-3/4 lg:w-1/2 lg:mr-10 xl:w-full " src="assets/images/home/martillo.png" alt="Imagen representativa" />
+                <img class="mx-auto md:w-1/2 lg:w-1/2 lg:mr-10 xl:w-full " src="assets/images/home/martillo.png"
+                    alt="Imagen representativa" />
             </div>
         </div>
     </section>
-    
-    
-    
+
+
+
 
     <div class="h-[10rem]">
 
@@ -428,10 +484,10 @@
                 </p>
             </div>
             <div class="mt-8">
-                <a  target="_blank" class="block">
-            <p class="mt-8 text-sm font-normal text-white">
-                Grupo Leal
-            </p>
+                <a target="_blank" class="block">
+                    <p class="mt-8 text-sm font-normal text-white">
+                        Grupo Leal
+                    </p>
                 </a>
             </div>
             <p class="mt-8 text-sm font-normal text-white">
@@ -442,81 +498,67 @@
     </div>
 
 
-<!--Footer container-->
-<footer class="flex flex-col items-center bg-[#193C3A] text-center text-surface dark:bg-[#193C3A] dark:text-white">
-    <div class="container mx-auto grid grid-cols-3 gap-2 pt-9">
-        <!-- Logo container -->
-        <div class="flex items-center justify-center">
-            <img src="assets/images/home/logob.png" alt="Logo">
-        </div>
+    <!--Footer container-->
+    <footer class="flex flex-col items-center bg-[#193C3A] text-center text-surface dark:bg-[#193C3A] dark:text-white">
+        <div class="container h-[10rem] grid grid-cols-3 gap-2 pt-4">
+            <!-- Logo container -->
+            <div class="flex items-center justify-center">
+                <img src="assets/images/home/logob.png" alt="Logo">
+            </div>
 
-        <!-- Texto y iconos de redes sociales -->
-        <div class="flex flex-col items-center justify-center space-y-2">
-            <!-- Texto encima de los iconos -->
-            <p class="text-white"><strong>LEGAL SERVICES</strong> <br>1324 N Broadway Santa Ana CA 92660 <br> 714-560-7251 - Info@Grupoleal.us</p>
+            <!-- Texto y iconos de redes sociales -->
+            <div class="flex flex-col items-center justify-center space-y-2">
+                <!-- Texto encima de los iconos -->
+                <p class="text-white"><strong>LEGAL SERVICES</strong> <br>1324 N Broadway Santa Ana CA 92660 <br>
+                    714-560-7251 - Info@Grupoleal.us</p>
 
-            <!-- Iconos de redes sociales -->
-            <div class="container">
-                <!-- Social media icons container -->
-                <div class="mb-6 flex justify-center space-x-2">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61556945993261&mibextid=LQQJ4d"
-                    type="button"
-                    class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
-                    data-twe-ripple-init>
-                    <span class="[&>svg]:h-5 [&>svg]:w-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 320 512">
-                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-                        <path
-                          d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
-                      </svg>
-                    </span>
-                  </a>
-            
-                  <a
-                    href="https://www.instagram.com/grupoleal.us?igsh=MzRlODBiNWFlZA=="
-                    type="button"
-                    class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
-                    data-twe-ripple-init>
-                    <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 448 512">
-                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-                        <path
-                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                      </svg>
-                    </span>
-                  </a>
-            
-                  <a
-                    href="#!"
-                    type="button"
-                    class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
-                    data-twe-ripple-init>
-                    <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 448 512">
-                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-                        <path
-                          d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
-                      </svg>
-                    </span>
-                  </a>
+                <!-- Iconos de redes sociales -->
+                <div class="container">
+                    <!-- Social media icons container -->
+                    <div class="mb-6 flex justify-center space-x-2">
+                        <a href="https://www.facebook.com/profile.php?id=61556945993261&mibextid=LQQJ4d" type="button"
+                            class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+                            data-twe-ripple-init>
+                            <span class="[&>svg]:h-5 [&>svg]:w-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
+                                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                    <path
+                                        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                                </svg>
+                            </span>
+                        </a>
+
+                        <a href="https://www.instagram.com/grupoleal.us?igsh=MzRlODBiNWFlZA==" type="button"
+                            class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+                            data-twe-ripple-init>
+                            <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                </svg>
+                            </span>
+                        </a>
+
+                        <a href="#!" type="button"
+                            class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
+                            data-twe-ripple-init>
+                            <span class="mx-auto [&>svg]:h-5 [&>svg]:w-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                                    <path
+                                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
                 </div>
-              </div>
-    </div>
+            </div>
             <!-- Texto de derechos de autor -->
             <div class="flex items-center justify-center">
                 <p class="text-white">INGLES / ESPAÑOL</p>
             </div>
-</footer>
+    </footer>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -549,6 +591,50 @@
             },
         };
     </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,es',
+        layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
+      }, 'google_translate_element');
+    }
+
+    function updateButtonStyles(language) {
+      var enButton = document.getElementById("en-button");
+      var esButton = document.getElementById("es-button");
+      
+      if (language === 'en') {
+        enButton.style.color = "black";
+        enButton.style.opacity = "1";
+        esButton.style.color = "black";
+        esButton.style.opacity = "0.5";
+      } else if (language === 'es') {
+        enButton.style.color = "black";
+        enButton.style.opacity = "0.5";
+        esButton.style.color = "black";
+        esButton.style.opacity = "1";
+      }
+    }
+
+    function changeLanguage(language) {
+      // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
+      setTimeout(function(){
+        var select = document.querySelector("select.goog-te-combo");
+        select.value = language;
+        select.dispatchEvent(new Event('change'));
+        
+        updateButtonStyles(language);
+      }, 500);
+    }
+    
+    // Llamar a updateButtonStyles al cargar la página para establecer los estilos iniciales
+    window.addEventListener('load', function() {
+      updateButtonStyles('es');
+    });
+  </script>
 </body>
 
 </html>
