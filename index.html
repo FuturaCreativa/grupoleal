@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/js/script.js">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
@@ -58,7 +58,7 @@
     <header class="bg-[#193C3A] hidden md:block py-10"
         style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
         <div class="flex justify-start">
-            <a href="index.html" class="logo mr-auto" style="margin: 0 auto; ;">
+            <a href="index.html" class="logo mr-auto" style="margin: 0 auto;">
                 <img class="h-18" src="assets/images/home/Logo.png" alt="Logo" />
             </a>
             <nav class="navbar contents font-semibold text-base lg:text-lg text-[#FCEDC9] ">
@@ -242,7 +242,7 @@
                         <span
                             class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
                             x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:10000]'">
-                            <span class="pr-20 supports-[counter-set]:sr-only">10000</span>+
+                            <span class="mr-10 pr-20 supports-[counter-set]:sr-only">10000</span>+
                         </span>
                     </h2>
                 </article>
@@ -251,7 +251,7 @@
         </div>
         <div class="col-span-1 pt-20 justify-center">
             <img src="assets/images/home/Frame 2.png" alt="">
-            <div class="text-center ml-10">
+            <div class="text-center ml-6">
                 <article>
                     <h2>
                         <span
@@ -265,7 +265,7 @@
         </div>
         <div class="col-span-1 pt-20">
             <img src="assets/images/home/Frame 3.png" alt="">
-            <div class="text-center ml-10">
+            <div class="text-center ml-4">
                 <article>
                     <h2>
                         <span
@@ -279,7 +279,7 @@
         </div>
         <div class="col-span-1 pt-20 ">
             <img src="assets/images/home/Frame 4.png" alt="">
-            <div class="text-center ml-10">
+            <div class="text-center">
                 <article>
                     <h2>
                         <span
@@ -329,7 +329,7 @@
         <div id="myTabContent">
             <div class="rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 <div class="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-4 items-center justify-center">
-                    <div class="md:block col-span-1 flex justify-center">
+                    <div class="hidden md:block col-span-1 flex justify-center">
                         <img class="h-full" src="assets/images/home/puerta.png" alt="" />
                     </div>
                     <div class="col-span-2 text-center">
@@ -559,6 +559,7 @@
                 </div>
             </div>
             <!-- Texto de derechos de autor -->
+            <div id="google_translate_element" style="display:none;"></div>
             <div class="px-4 flex items-center justify-end">
                 <button id="en-button" class="translate-button notranslate text-white" onclick="changeLanguage('en')">INGLES /</button>
                 <button id="es-button" class="translate-button notranslate text-white" onclick="changeLanguage('es')">ESPAÑOL</button>              
