@@ -1,4 +1,4 @@
-<!doctype html>
+    <!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -122,8 +122,8 @@
         <div class="">
             <div id="google_translate_element" style="display:none;"></div>
             <div class="px-4 flex items-center justify-end">
-                <button id="en-button" class="translate-button notranslate text-[#5D7F7B]" onclick="changeLanguage('en')">INGLES</button>
-                <button id="es-button" class="translate-button notranslate text-[#193C3A]" onclick="changeLanguage('es')">ESPAÑOL</button>              
+                <button id="en-button" class="translate-button notranslate text-white" onclick="changeLanguage('en')">INGLES /</button>
+                <button id="es-button" class="translate-button notranslate text-white" onclick="changeLanguage('es')">ESPAÑOL</button>              
             </div>
         </div>
     </header>
@@ -224,7 +224,7 @@
                 </p>
             </div>
             <div class="row-span-1 absolute right-4 justify-center max-w-screen-xl ">
-                <img class="hidden md:block container mx-auto items-center justify-center"
+                <img class="mt-20 hidden md:block container mx-auto items-center justify-center"
                     src="assets/images/home/balanza.png" alt="" style="height: 750px;" />
             </div>
         </div>
@@ -236,13 +236,13 @@
     <div class="py-20 grid md:grid-cols-6 justify-items-center sm:grid-cols-1">
         <div class="md:col-start-2 col-span-1 pt-20">
             <img src="assets/images/home/Frame 1.png" alt="">
-            <div class="text-center mr-10">
+            <div class="text-center">
                 <article>
                     <h2>
                         <span
                             class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
                             x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:10000]'">
-                            <span class="supports-[counter-set]:sr-only">10000</span>+
+                            <span class="pr-20 supports-[counter-set]:sr-only">10000</span>+
                         </span>
                     </h2>
                 </article>
@@ -559,8 +559,9 @@
                 </div>
             </div>
             <!-- Texto de derechos de autor -->
-            <div class="flex items-center justify-center">
-                <p class="text-white">INGLES / ESPAÑOL</p>
+            <div class="px-4 flex items-center justify-end">
+                <button id="en-button" class="translate-button notranslate text-white" onclick="changeLanguage('en')">INGLES /</button>
+                <button id="es-button" class="translate-button notranslate text-white" onclick="changeLanguage('es')">ESPAÑOL</button>              
             </div>
     </footer>
     <!-- Swiper JS -->
@@ -611,14 +612,14 @@
       var esButton = document.getElementById("es-button");
       
       if (language === 'en') {
-        enButton.style.color = "black";
+        enButton.style.color = "White";
         enButton.style.opacity = "1";
-        esButton.style.color = "black";
+        esButton.style.color = "White";
         esButton.style.opacity = "0.5";
       } else if (language === 'es') {
-        enButton.style.color = "black";
+        enButton.style.color = "White";
         enButton.style.opacity = "0.5";
-        esButton.style.color = "black";
+        esButton.style.color = "White";
         esButton.style.opacity = "1";
       }
     }

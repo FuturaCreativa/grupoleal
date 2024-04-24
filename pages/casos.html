@@ -12,6 +12,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Title -->
     <title>Casos</title>
+
+    <style>
+        /* Ocultar el cuadro de Google Translate */
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+            visibility: hidden;
+        }
+            /* Estilos para los botones */
+    .translate-button {
+      color: #fcedc9;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      opacity: 100;
+      font-size: 18px;
+      padding:3px;
+    }
+
+    .VIpgJd-ZVi9od-ORHb-OEVmcd {
+    	display: none !important;
+        visibility: hidden !important;
+    }
+
+    body {
+            top: 0px !important;
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -410,8 +439,9 @@
                   </div>
         </div>
                 <!-- Texto de derechos de autor -->
-                <div class="flex items-center justify-center">
-                    <p class="text-[#193C3A]">INGLES / ESPAÑOL</p>
+                <div class="px-4 flex items-center justify-end">
+                    <button id="en-button" class="translate-button notranslate text-white" onclick="changeLanguage('en')">INGLES /</button>
+                    <button id="es-button" class="translate-button notranslate text-white" onclick="changeLanguage('es')">ESPAÑOL</button>              
                 </div>
     </footer>
 
@@ -429,6 +459,48 @@
             },
         });
     </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'en,es',
+            layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
+          }, 'google_translate_element');
+        }
+    
+        function updateButtonStyles(language) {
+          var enButton = document.getElementById("en-button");
+          var esButton = document.getElementById("es-button");
+          
+          if (language === 'en') {
+            enButton.style.color = "black";
+            enButton.style.opacity = "1";
+            esButton.style.color = "black";
+            esButton.style.opacity = "0.5";
+          } else if (language === 'es') {
+            enButton.style.color = "black";
+            enButton.style.opacity = "0.5";
+            esButton.style.color = "black";
+            esButton.style.opacity = "1";
+          }
+        }
+    
+        function changeLanguage(language) {
+          // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
+          setTimeout(function(){
+            var select = document.querySelector("select.goog-te-combo");
+            select.value = language;
+            select.dispatchEvent(new Event('change'));
+            
+            updateButtonStyles(language);
+          }, 500);
+        }
+        
+        // Llamar a updateButtonStyles al cargar la página para establecer los estilos iniciales
+        window.addEventListener('load', function() {
+          updateButtonStyles('es');
+        });
+      </script>
 </body>
 
 </html>
