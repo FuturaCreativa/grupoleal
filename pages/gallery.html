@@ -31,10 +31,38 @@
             scroll-snap-align: start;
         }
 
-        .aspect-video{
+        .aspect-video {
             aspect-ratio: 0 !important;
         }
+
+        /* Ocultar el cuadro de Google Translate */
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+            visibility: hidden;
+        }
+
+        /* Estilos para los botones */
+        .translate-button {
+            color: #fcedc9;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            opacity: 100;
+            font-size: 18px;
+            padding: 3px;
+        }
+
+        .VIpgJd-ZVi9od-ORHb-OEVmcd {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
     </style>
+
+
 
 </head>
 
@@ -43,7 +71,7 @@
 
     <header class="bg-[#FCEDC9] hidden md:block">
         <div class="container h-[9rem] flex items-center justify-between">
-            <a href="index.html" class="logo mr-auto px-20">
+            <a href="../index.html" class="logo mr-auto px-20">
                 <img class="h-24 px-5 justify-start" src="../assets/images/casos/Logo.png" alt="../index.html"
                     href="../index.html" />
             </a>
@@ -86,7 +114,7 @@
 
     <nav class="bg-[#193C3A] text-white shadow-lg block md:hidden">
         <div class="container mx-auto flex items-center h-24">
-            <a href="#" class="flex items-center justify-center">
+            <a href="../index.html" class="flex items-center justify-center">
                 <img class="h-16 pl-8" src="../assets/images/home/Logo.png" alt="Logo" />
             </a>
             <button id="mobile-menu-button" class="ml-auto mr-4 focus:outline-none">
@@ -212,55 +240,55 @@
                 <video class="aspect-video" controls>
                     <source src="../assets/video/Perseguir después de un choque .mov" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>            
+                </video>
             </div>
             <div class="carousel-item">
                 <video class="aspect-video" controls>
                     <source src="../assets/video/El error más común .mov" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>            
+                </video>
             </div>
             <div class="carousel-item">
                 <video class="aspect-video" controls>
                     <source src="../assets/video/Choque sin seguro .mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>            
+                </video>
             </div>
             <div class="carousel-item">
                 <video class="aspect-video" controls>
                     <source src="../assets/video/video8.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>            
+                </video>
             </div>
             <div class="carousel-item">
                 <video class="aspect-video" controls>
                     <source src="../assets/video/video6.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>            
+                </video>
             </div>
             <div class="carousel-item">
                 <video class="aspect-video" controls>
                     <source src="../assets/video/video5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>            
+                </video>
             </div>
             <div class="carousel-item">
                 <video class="aspect-video" controls>
                     <source src="../assets/video/video4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>            
+                </video>
             </div>
             <div class="carousel-item">
                 <video class="aspect-video" controls>
                     <source src="../assets/video/video3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>            
+                </video>
             </div>
             <div class="carousel-item">
                 <video class="aspect-video" controls>
                     <source src="../assets/video/video2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>            
+                </video>
             </div>
         </div>
 
@@ -307,9 +335,8 @@
     </script>
 
 
-    <footer
-        class="w-full bg-[#193C3A] text-center text-surface dark:bg-[#193C3A] dark:text-white">
-        <div class="container md:h-[10rem] sm:h-[20rem] md:grid md:grid-cols-3 gap-2 pt-4 sm:grid-cols-2">
+    <footer class="flex flex-col items-center bg-[#193C3A] text-center text-surface dark:bg-[#193C3A] dark:text-white">
+        <div class="container md:h-[11rem] sm:h-[20rem] md:grid md:grid-cols-3 gap-2 pt-4 sm:grid-cols-2">
             <!-- Logo container -->
             <div class="flex items-center justify-center">
                 <img src="../assets/images/home/logob.png" alt="Logo">
@@ -318,13 +345,13 @@
             <!-- Texto y iconos de redes sociales -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <!-- Texto encima de los iconos -->
-                <p class="text-white"><strong>LEGAL SERVICES</strong> <br>1324 N Broadway Santa Ana CA 92660 <br>
+                <p class="text-white"><br><strong>LEGAL SERVICES</strong> <br>1324 N Broadway Santa Ana CA 92660 <br>
                     714-560-7251 - Info@Grupoleal.us</p>
 
                 <!-- Iconos de redes sociales -->
                 <div class="container">
                     <!-- Social media icons container -->
-                    <div class="mb-6 flex justify-center space-x-2">
+                    <div class="flex justify-center space-x-2">
                         <a href="https://www.facebook.com/profile.php?id=61556945993261&mibextid=LQQJ4d" type="button"
                             class="rounded-full bg-transparent p-3 font-medium uppercase leading-normal text-surface transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus:ring-0 dark:text-white dark:hover:bg-secondary-900"
                             data-twe-ripple-init>
@@ -363,13 +390,18 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-center justify-center">
-                <p class="text-white">INGLES / ESPAÑOL</p>
-            </div>
-            </div>
             <!-- Texto de derechos de autor -->
-
+            <div id="google_translate_element" style="display:none;"></div>
+            <div class="px-4 flex items-center justify-end">
+                <button id="en-button" class="translate-button notranslate text-white"
+                    onclick="changeLanguage('en')">INGLES /</button>
+                <button id="es-button" class="translate-button notranslate text-white"
+                    onclick="changeLanguage('es')">ESPAÑOL</button>
+            </div>
     </footer>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -384,14 +416,14 @@
             var esButton = document.getElementById("es-button");
 
             if (language === 'en') {
-                enButton.style.color = "black";
+                enButton.style.color = "white";
                 enButton.style.opacity = "1";
-                esButton.style.color = "black";
+                esButton.style.color = "white";
                 esButton.style.opacity = "0.5";
             } else if (language === 'es') {
-                enButton.style.color = "black";
+                enButton.style.color = "white";
                 enButton.style.opacity = "0.5";
-                esButton.style.color = "black";
+                esButton.style.color = "white";
                 esButton.style.opacity = "1";
             }
         }
