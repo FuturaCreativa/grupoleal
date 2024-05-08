@@ -48,3 +48,15 @@ radioButtons.forEach(radioButton => {
     });
   });
 });
+
+function redirectToFacebook() {
+  window.location.href = "https://www.facebook.com/profile.php?id=61556945993261&mibextid=LQQJ4d";
+}
+
+function redirectToInsta() {
+  window.location.href = "https://www.instagram.com/grupoleal.us?igsh=MzRlODBiNWFlZA==";
+}
+function redirectToLink() {
+  window.location.href = "https://www.linkedin.com/";
+}
+

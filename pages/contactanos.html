@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/script.js"></script>
     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <link rel="icon" href="../assets/images/home/martillo.png" type="image/png">
+
     <!-- Title -->
     <title>Contactanos</title>
 
@@ -39,6 +42,8 @@
 
     </style>
 </head>
+
+
 
 <body>
     <!-- Navbar -->
@@ -171,7 +176,7 @@
                         <div class="m-7">
                             <form action="https://api.web3forms.com/submit" method="POST" id="form">
             
-                                <input type="hidden" name="apikey" value="3c11c5f2-9d9e-4975-bb81-f266b146c2b7">
+                                <input type="hidden" name="apikey" value="8fc381f4-11fd-4e9b-b724-67cce3048beb">
                                 <input type="hidden" name="subject" value="grupoleal">
                                 <input type="checkbox" name="botcheck" id="" style="display: none;">
             
@@ -252,7 +257,7 @@
             <div class="row-span-1 flex justify-center mt-12">
                 <div class="container mx-auto">
                     <div class="grid grid-cols-1 gap-4 justify-center items-center">
-                        <div class="col-span-1 flex pb-5 justify-center">
+                        <div class="col-span-1 flex pb-5 justify-center cursor-pointer" onclick="redirectToFacebook()">
                             <div class="mr-9">
                                 <img src="../assets/images/contactanos/facebook.png" alt="">
                             </div>
@@ -262,7 +267,8 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-span-2 flex justify-center">
+                        
+                        <div class="col-span-2 flex justify-center cursor-pointer" onclick="redirectToInsta()">
                             <img src="../assets/images/contactanos/insta.png" alt="">
                             <div class=" md:mr-[12rem]">
                                 <span class="text-2xl pl-14">
@@ -272,7 +278,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-span-2 flex justify-center">
+                        <div class="col-span-2 flex justify-center cursor-pointer" onclick="redirectToLink()">
                             <img src="../assets/images/contactanos/linkedin.png" alt="">
                             <div class="md:pb-10 md:mr-[14rem] ">
                                 <span class="text-2xl pl-14">
@@ -518,7 +524,7 @@
         <div className=" w-full lg:w-1/2 xl:w-2/1  px-8 py-4 mx-auto">
             <div className="relative w-full">
                 <iframe class="w-full h-96"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3136.4984994621436!2d-116.9637292059003!3d32.79517632053684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d959c9cc055241%3A0xb9186a160ec5c5d7!2sStarbucks!5e0!3m2!1sen!2sus!4v1712266144130!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.5592746857387!2d-117.87085524725396!3d33.75687135869652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd9aef7e78c8d%3A0xaaff9f7ec700e138!2s1324%20N%20Broadway%2C%20Santa%20Ana%2C%20CA%2092706%2C%20EE.%20UU.!5e0!3m2!1ses!2ssv!4v1714688090043!5m2!1ses!2ssv"
                     style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
