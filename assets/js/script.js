@@ -57,6 +57,6 @@ function redirectToInsta() {
   window.location.href = "https://www.instagram.com/grupoleal.us?igsh=MzRlODBiNWFlZA==";
 }
 function redirectToLink() {
-  window.location.href = "https://www.linkedin.com/";
+  window.location.href = "tel:+16572100377";
 }
 

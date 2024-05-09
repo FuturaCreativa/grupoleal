@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../assets/js/script.js"></script>
-    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
     <link rel="icon" href="../assets/images/home/martillo.png" type="image/png">
 
     <!-- Title -->
@@ -20,26 +19,26 @@
             display: none !important;
             visibility: hidden;
         }
-            /* Estilos para los botones */
-    .translate-button {
-      color: #fcedc9;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      opacity: 100;
-      font-size: 18px;
-      padding:3px;
-    }
 
-    .VIpgJd-ZVi9od-ORHb-OEVmcd {
-    	display: none !important;
-        visibility: hidden !important;
-    }
-
-    body {
-            top: 0px !important;
+        /* Estilos para los botones */
+        .translate-button {
+            color: #fcedc9;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            opacity: 100;
+            font-size: 18px;
+            padding: 3px;
         }
 
+        .VIpgJd-ZVi9od-ORHb-OEVmcd {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
     </style>
 </head>
 
@@ -89,8 +88,7 @@
         </div>
     </header>
 
-    <nav class="bg-[#193C3A] text-white shadow-lg block md:hidden" 
-    style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
+    <nav class="bg-[#193C3A] text-white shadow-lg block md:hidden">
         <div class="container mx-auto flex items-center h-24">
             <a href="../index.html" class="flex items-center justify-center">
                 <img class="h-16 pl-8" src="../assets/images/home/Logo.png" alt="Logo" />
@@ -103,7 +101,8 @@
                 </svg>
             </button>
         </div>
-        <div id="mobile-menu-container" class="hidden md:hidden"> <!-- Cambiado a "md:hidden" para mostrar en dispositivos móviles -->
+        <div id="mobile-menu-container" class="hidden md:hidden">
+            <!-- Cambiado a "md:hidden" para mostrar en dispositivos móviles -->
             <ul class="mx-auto flex flex-col items-start">
                 <li class="p-5 xl:p-8">
                     <a href="../index.html#especial">
@@ -133,21 +132,11 @@
             </ul>
         </div>
     </nav>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenuContainer = document.getElementById('mobile-menu-container');
-    
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenuContainer.classList.toggle('hidden');
-            });
-        });
-    </script>
-    <!-- fin de mobile navbar -->
-    
 
-<!-- component -->
+    <!-- fin de mobile navbar -->
+
+
+    <!-- component -->
 
 
     <section class="mt-10 bg-[#FCEDC9] h-[20vh]">
@@ -164,168 +153,179 @@
 
     <section class="my-10">
         <form action="https://api.web3forms.com/submit" method="POST" id="form">
-        <div id="contacto" class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center h-full justify-center">
-            <div class="place-self-center bg-white dark:bg-white">
-                <div class="">
-                    <div class="grid grid-cols-1 max-w-md my-10 bg-[#5e7775] dark:bg-[#5e7775] p-5 rounded-[42px] shadow-sm">
-                        <div class="flex items-center text-[#FCEDC9] text-2xl w-full px-10">
-                            <img class="w-12 h-12 bg-[#FCEDC9] rounded-full justify-center py-2 px-2"
-                                src="../assets/images/contactanos/Icono logo.png" alt="User Avatar">
-                            <P class="pl-4">Grupo Leal</P>
+            <div id="contacto" class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center h-full justify-center">
+                <div class="place-self-center bg-white dark:bg-white">
+                    <div class="">
+                        <div
+                            class="grid grid-cols-1 max-w-md my-10 bg-[#5e7775] dark:bg-[#5e7775] p-5 rounded-[42px] shadow-sm">
+                            <div class="flex items-center text-[#FCEDC9] text-2xl w-full px-10">
+                                <img class="w-12 h-12 bg-[#FCEDC9] rounded-full justify-center py-2 px-2"
+                                    src="../assets/images/contactanos/Icono logo.png" alt="User Avatar">
+                                <P class="pl-4">Grupo Leal</P>
+                            </div>
+                            <div class="m-7">
+                                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+
+                                    <input type="hidden" name="apikey" value="8fc381f4-11fd-4e9b-b724-67cce3048beb">
+                                    <input type="hidden" name="subject" value="grupoleal">
+                                    <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+
+                                    <div class="mb-6">
+                                        <input src="../assets/images/contactanos/Icono logo.png" alt="User Avatar"
+                                            type="text" name="Correo" id="Correo" placeholder="Correo" required
+                                            class="placeholder-[#FCEDC9] bg-[#193C3A] w-full px-3 py-2 placeholder-[#000] border border-[#193C3A] rounded-full focus:outline-none focus:ring focus:ring-[#193C3A] focus:border-[#193C3A] dark:bg-[#193C3A] dark:text-white dark:placeholder-[#FCEDC9] dark:border-[#193C3A] dark:focus:ring-[#193C3A] dark:focus:border-[#193C3A]" />
+
+                                    </div>
+                                    <div class="mb-6">
+                                        <textarea rows="5" name="message" id="message"
+                                            placeholder="¿Tienes una pregunta legal?"
+                                            class="w-full px-3 py-2 placeholder-[#FCEDC9] bg-[#193C3A] border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-[#193C3A] dark:text-white dark:placeholder-[#FCEDC9] dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                                            required></textarea>
+                                    </div>
+                                    <div class="mb-6">
+                                        <button type="submit"
+                                            class="w-full px-3 py-4 text-[#193C3A] bg-[#FCEDC9] rounded-full focus:bg-[#FCEDC9] focus:outline-none">Enviar</button>
+                                    </div>
+                                    <p class="text-base text-center text-[#193C3A] rounded-full" id="result">
+                                    </p>
+                                </form>
+
+                            </div>
                         </div>
-                        <div class="m-7">
-                            <form action="https://api.web3forms.com/submit" method="POST" id="form">
-            
-                                <input type="hidden" name="apikey" value="8fc381f4-11fd-4e9b-b724-67cce3048beb">
-                                <input type="hidden" name="subject" value="grupoleal">
-                                <input type="checkbox" name="botcheck" id="" style="display: none;">
-            
-            
-                                <div class="mb-6">
-                                    <input src="../assets/images/contactanos/Icono logo.png" alt="User Avatar" type="text" name="Correo" id="Correo" placeholder="Correo" required class="placeholder-[#FCEDC9] bg-[#193C3A] w-full px-3 py-2 placeholder-[#000] border border-[#193C3A] rounded-full focus:outline-none focus:ring focus:ring-[#193C3A] focus:border-[#193C3A] dark:bg-[#193C3A] dark:text-white dark:placeholder-[#FCEDC9] dark:border-[#193C3A] dark:focus:ring-[#193C3A] dark:focus:border-[#193C3A]" />
-                               
-                                </div>  
-                                <div class="mb-6">
-                                    <textarea rows="5" name="message" id="message" placeholder="¿Tienes una pregunta legal?" class="w-full px-3 py-2 placeholder-[#FCEDC9] bg-[#193C3A] border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-[#193C3A] dark:text-white dark:placeholder-[#FCEDC9] dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
+                        <div class="flex justify-center mt-12 grid grid-cols-2">
+                            <div class="container mx-auto ">
+                                <div class="grid grid-cols-1 gap-4 justify-center items-center">
                                 </div>
-                                <div class="mb-6">
-                                    <button type="submit" class="w-full px-3 py-4 text-[#193C3A] bg-[#FCEDC9] rounded-full focus:bg-[#FCEDC9] focus:outline-none">Enviar</button>
-                                </div>
-                                <p class="text-base text-center text-[#193C3A] rounded-full" id="result">
-                                </p>
-                            </form>
-                        
-                        </div>
-                    </div>
-                    <div class="flex justify-center mt-12 grid grid-cols-2">
-                        <div class="container mx-auto ">
-                            <div class="grid grid-cols-1 gap-4 justify-center items-center">
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>
-            </div>
-            
-            <script>
-            const form = document.getElementById('form');
-            const result = document.getElementById('result');
-            
-            form.addEventListener('submit', function(e) {
-                const formData = new FormData(form);
-                e.preventDefault();
-                var object = {};
-                formData.forEach((value, key) => {
-                    object[key] = value
-                });
-                var json = JSON.stringify(object);
-                result.innerHTML = "Please wait..."
-            
-                fetch('https://api.web3forms.com/submit', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: json
+
+                <script>
+                    const form = document.getElementById('form');
+                    const result = document.getElementById('result');
+
+                    form.addEventListener('submit', function (e) {
+                        const formData = new FormData(form);
+                        e.preventDefault();
+                        var object = {};
+                        formData.forEach((value, key) => {
+                            object[key] = value
+                        });
+                        var json = JSON.stringify(object);
+                        result.innerHTML = "Please wait..."
+
+                        fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: json
+                        })
+                            .then(async (response) => {
+                                let json = await response.json();
+                                if (response.status == 200) {
+                                    result.innerHTML = json.message;
+                                    result.classList.remove('text-gray-500');
+                                    result.classList.add('text-green-500');
+                                } else {
+                                    console.log(response);
+                                    result.innerHTML = json.message;
+                                    result.classList.remove('text-gray-500');
+                                    result.classList.add('text-red-500');
+                                }
+                            })
+                            .catch(error => {
+                                console.log(error);
+                                result.innerHTML = "Something went wrong!";
+                            })
+                            .then(function () {
+                                form.reset();
+                                setTimeout(() => {
+                                    result.style.display = "none";
+                                }, 5000);
+                            });
                     })
-                    .then(async (response) => {
-                        let json = await response.json();
-                        if (response.status == 200) {
-                            result.innerHTML = json.message;
-                             result.classList.remove('text-gray-500');
-                            result.classList.add('text-green-500');
-                        } else {
-                            console.log(response);
-                            result.innerHTML = json.message;
-                             result.classList.remove('text-gray-500');
-                             result.classList.add('text-red-500');
-                        }
-                    })
-                    .catch(error => {
-                        console.log(error);
-                        result.innerHTML = "Something went wrong!";
-                    })
-                    .then(function() {
-                        form.reset();
-                        setTimeout(() => {
-                            result.style.display = "none"; 
-                        }, 5000);
-                    });
-            })
-            </script>
-            
-            <div class="row-span-1 flex justify-center mt-12">
-                <div class="container mx-auto">
-                    <div class="grid grid-cols-1 gap-4 justify-center items-center">
-                        <div class="col-span-1 flex pb-5 justify-center cursor-pointer" onclick="redirectToFacebook()">
-                            <div class="mr-9">
-                                <img src="../assets/images/contactanos/facebook.png" alt="">
-                            </div>
-                            <div class="md:mr-[10rem]">
-                                <span class="text-2xl pl-10">
-                                    Facebook
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="col-span-2 flex justify-center cursor-pointer" onclick="redirectToInsta()">
-                            <img src="../assets/images/contactanos/insta.png" alt="">
-                            <div class=" md:mr-[12rem]">
-                                <span class="text-2xl pl-14">
-                                    <strong class="text-white">
-                                    </strong>
-                                    Instagram
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-span-2 flex justify-center cursor-pointer" onclick="redirectToLink()">
-                            <img src="../assets/images/contactanos/linkedin.png" alt="">
-                            <div class="md:pb-10 md:mr-[14rem] ">
-                                <span class="text-2xl pl-14">
-                                    <strong class="text-white">
-                                    </strong>
-                                    Linkedin
-                                </span>
-                            </div>
-                        </div>
-                        <div class="justify-center py-10">
-                            <div class="col-span-2 flex items-center">
-                                <div>
-                                    <span class="md:text-2xl sm:text-xl pl-14">
-                                        714-560-7251 - info@grupoleal.us 
+                </script>
+
+                <div class="row-span-1 flex justify-center mt-12">
+                    <div class="container mx-auto">
+                        <div class="grid grid-cols-1 gap-4 justify-center items-center">
+                            <div class="col-span-1 flex pb-5 justify-center cursor-pointer"
+                                onclick="redirectToFacebook()">
+                                <div class="mr-9">
+                                    <img src="../assets/images/contactanos/facebook.png" alt="">
+                                </div>
+                                <div class="md:mr-[10rem] mt-2"><!-- Ajuste aquí -->
+                                    <span class="text-2xl pl-10">
+                                        Facebook
                                     </span>
                                 </div>
                             </div>
-                            <div class="col-span-2 flex items-center">
-                                <div>
-                                    <span class="md:text-2xl sm:text-xl pl-14">
-                                        1324 N Broadway Santa Ana CA 92660
+
+                            <div class="col-span-2 flex justify-center cursor-pointer" onclick="redirectToInsta()">
+                                <img src="../assets/images/contactanos/insta.png" alt="">
+                                <div class="md:mr-[12rem] mt-2"><!-- Ajuste aquí -->
+                                    <span class="text-2xl pl-14">
+                                        <strong class="text-white">
+                                        </strong>
+                                        Instagram
                                     </span>
+                                </div>
+                            </div>
+
+                            <div class="col-span-2 flex justify-center cursor-pointer py-4" onclick="redirectToLink()">
+                                <img src="../assets/images/contactanos/mensaje5.png" alt="">
+                                <div class="md:mr-[13rem] mt-4"><!-- Ajuste aquí -->
+                                    <span class="text-2xl pl-14">
+                                        <strong class="text-white">
+                                        </strong>
+                                        Mensaje
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="justify-center py-10">
+                                <div class="col-span-2 flex items-center">
+                                    <div>
+                                        <span class="md:text-2xl sm:text-xl pl-14">
+                                            714-560-7251 - info@grupoleal.us
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-span-2 flex items-center">
+                                    <div>
+                                        <span class="md:text-2xl sm:text-xl pl-14">
+                                            1324 N Broadway Santa Ana CA 92660
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
-    
-    
+
+
     <section class="mt-24 bg-[#193C3A] h-[30vh] text-white ">
-        <div  class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center"
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center"
             style="height: inherit;">
             <div class="row-span-1 text-center">
                 <h1 class="text-4xl font-bold px-10 mx-10">Preguntas Frecuentes</h1>
             </div>
             <div class="row-span-1 absolute right-0 mb-10">
-                <img class="h-4/5 hidden sm:block lg:h-full md:h-1/2" src="../assets/images/contactanos/question.png" alt="" />
+                <img class="h-4/5 hidden sm:block lg:h-full md:h-1/2" src="../assets/images/contactanos/question.png"
+                    alt="" />
             </div>
         </div>
     </section>
 
-    <section class="relative bg-cover bg-no-repeat bg-center min-h-sceen my-20 md:py-28" style="background-image: url(../assets/images/contactanos/pantalla.png); background-position: left; background-size: cover; ">
+    <section class="relative bg-cover bg-no-repeat bg-center min-h-sceen my-20 md:py-28"
+        style="background-image: url(../assets/images/contactanos/pantalla.png); background-position: left; background-size: cover; ">
         <!-- component -->
-        <div  class="max-w-screen-xl mx-auto px-5 bg-transparent">
+        <div class="max-w-screen-xl mx-auto px-5 bg-transparent">
             <!-- Primero -->
             <div class="py-5">
                 <details class="group">
@@ -345,7 +345,8 @@
                     </summary>
                     <div class="text-neutral-600 mt-3 group-open:animate-fadeIn relative">
                         <img class="w-full hidden lg:block" src="../assets/images/contactanos/fondo.png" alt="">
-                        <span class="sm:relative text-[#193C3A] md:relative top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 lg:absolute lg:text-white ">
+                        <span
+                            class="sm:relative text-[#193C3A] md:relative top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 lg:absolute lg:text-white ">
                             <span class="font-bold">¿Hay muchos abogados, por qué acudir a Grupo Leal después de un
                                 choque?</span>
                             <br>
@@ -396,7 +397,8 @@
                     </summary>
                     <div class="text-neutral-600 mt-3 group-open:animate-fadeIn relative">
                         <img class="w-full hidden lg:block" src="../assets/images/contactanos/fondo.png" alt="">
-                        <span class="sm:relative text-[#193C3A] md:relative top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 lg:absolute lg:text-white ">
+                        <span
+                            class="sm:relative text-[#193C3A] md:relative top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 lg:absolute lg:text-white ">
                             <span class="font-bold">¿Qué hago si yo o un ser querido fue víctima de abuso sexual?</span>
                             <br>
                             Acudir a la policía para denunciar el abuso lo antes posible y acudir a urgencias o a tu
@@ -444,7 +446,8 @@
                     </summary>
                     <div class="text-neutral-600 mt-3 group-open:animate-fadeIn relative">
                         <img class="w-full hidden lg:block" src="../assets/images/contactanos/fondo.png" alt="">
-                        <span class="sm:relative text-[#193C3A] md:relative top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 lg:absolute lg:text-white">
+                        <span
+                            class="sm:relative text-[#193C3A] md:relative top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 lg:absolute lg:text-white">
                             <span class="font-bold">¿Puedo demandar a mi patrón si me accidento en el trabajo?</span>
                             <br>
                             No. Si el lugar para el que trabajas tiene seguro de compensación al trabajador, es muy
@@ -492,7 +495,8 @@
                     </summary>
                     <div class="text-neutral-600 mt-3 group-open:animate-fadeIn relative">
                         <img class="w-full hidden lg:block" src="../assets/images/contactanos/fondo.png" alt="">
-                        <span class="sm:relative text-[#193C3A] md:relative top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 lg:absolute lg:text-white ">
+                        <span
+                            class="sm:relative text-[#193C3A] md:relative top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 lg:absolute lg:text-white ">
                             <span class="font-bold">¿Sólo atienden asuntos de mordeduras de perros?</span>
                             <br>
                             No. Atendemos todo tipo de ataque de animales (e.g., perros, lobos, víboras, etc.)
@@ -524,12 +528,12 @@
         <div className=" w-full lg:w-1/2 xl:w-2/1  px-8 py-4 mx-auto">
             <div className="relative w-full">
                 <iframe class="w-full h-96"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.5592746857387!2d-117.87085524725396!3d33.75687135869652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd9aef7e78c8d%3A0xaaff9f7ec700e138!2s1324%20N%20Broadway%2C%20Santa%20Ana%2C%20CA%2092706%2C%20EE.%20UU.!5e0!3m2!1ses!2ssv!4v1714688090043!5m2!1ses!2ssv"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.1872124984807!2d-117.8776776717033!3d33.6123006148011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dce19857ca7253%3A0x44b2fd71e81d70ed!2s120%20Newport%20Center%20Dr!5e0!3m2!1ses!2ssv!4v1715196292492!5m2!1ses!2ssv"
                     style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </section> 
+    </section>
 
     <!--Footer container-->
     <footer class="flex flex-col items-center bg-[#193C3A] text-center text-surface dark:bg-[#193C3A] dark:text-white">
@@ -542,8 +546,9 @@
             <!-- Texto y iconos de redes sociales -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <!-- Texto encima de los iconos -->
-                <p class="text-white"><br><strong>LEGAL SERVICES</strong> <br>1324 N Broadway Santa Ana CA 92660 <br>
-                    714-560-7251 - Info@Grupoleal.us</p>
+                <p class="text-white"><br><strong>LEGAL SERVICES</strong> <br>120 Newport Center Dr, Newport Beach, CA
+                    92660<br>
+                    (657) 210-0377 - Info@Grupoleal.us</p>
 
                 <!-- Iconos de redes sociales -->
                 <div class="container">
@@ -590,56 +595,69 @@
             <!-- Texto de derechos de autor -->
             <div id="google_translate_element" style="display:none;"></div>
             <div class="px-4 flex items-center justify-end">
-                <button id="en-button" class="translate-button notranslate text-white" onclick="changeLanguage('en')">INGLES /</button>
-                <button id="es-button" class="translate-button notranslate text-white" onclick="changeLanguage('es')">ESPAÑOL</button>              
+                <button id="en-button" class="translate-button notranslate text-white"
+                    onclick="changeLanguage('en')">INGLES /</button>
+                <button id="es-button" class="translate-button notranslate text-white"
+                    onclick="changeLanguage('es')">ESPAÑOL</button>
             </div>
     </footer>
 
 
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script type="text/javascript">
         function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'es',
-            includedLanguages: 'en,es',
-            layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
-          }, 'google_translate_element');
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,es',
+                layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
+            }, 'google_translate_element');
         }
-    
+
         function updateButtonStyles(language) {
-          var enButton = document.getElementById("en-button");
-          var esButton = document.getElementById("es-button");
-          
-          if (language === 'en') {
-            enButton.style.color = "white";
-            enButton.style.opacity = "1";
-            esButton.style.color = "white";
-            esButton.style.opacity = "0.5";
-          } else if (language === 'es') {
-            enButton.style.color = "white";
-            enButton.style.opacity = "0.5";
-            esButton.style.color = "white";
-            esButton.style.opacity = "1";
-          }
+            var enButton = document.getElementById("en-button");
+            var esButton = document.getElementById("es-button");
+
+            if (language === 'en') {
+                enButton.style.color = "white";
+                enButton.style.opacity = "1";
+                esButton.style.color = "white";
+                esButton.style.opacity = "0.5";
+            } else if (language === 'es') {
+                enButton.style.color = "white";
+                enButton.style.opacity = "0.5";
+                esButton.style.color = "white";
+                esButton.style.opacity = "1";
+            }
         }
-    
+
         function changeLanguage(language) {
-          // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
-          setTimeout(function(){
-            var select = document.querySelector("select.goog-te-combo");
-            select.value = language;
-            select.dispatchEvent(new Event('change'));
-            
-            updateButtonStyles(language);
-          }, 500);
+            // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
+            setTimeout(function () {
+                var select = document.querySelector("select.goog-te-combo");
+                select.value = language;
+                select.dispatchEvent(new Event('change'));
+
+                updateButtonStyles(language);
+            }, 500);
         }
-        
+
         // Llamar a updateButtonStyles al cargar la página para establecer los estilos iniciales
-        window.addEventListener('load', function() {
-          updateButtonStyles('es');
+        window.addEventListener('load', function () {
+            updateButtonStyles('es');
         });
-      </script>
+    </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenuContainer = document.getElementById('mobile-menu-container');
+    
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenuContainer.classList.toggle('hidden');
+                });
+            });
+        </script>
 </body>
 
 </html>
