@@ -66,7 +66,7 @@
                 <ul class="mx-auto flex items-start">
                     <li class="p-5 xl:p-8 active">
                         <a href="index.html" class="hover:text-[#5D7F7B]">
-                          <span>pagina de inicio</span>
+                          <span>Inicio</span>
                         </a>
                       </li>
                     <li class="p-5 xl:p-8 active">
@@ -639,6 +639,31 @@
     window.addEventListener('load', function() {
       updateButtonStyles('es');
     });
+  </script>
+
+  
+<script type="text/javascript">
+    function replaceText(oldText, newText) {
+      document.body.innerHTML = document.body.innerHTML.replace(new RegExp(oldText, 'g'), newText);
+    }
+
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === 'childList' || mutation.type === 'subtree') {
+          replaceText('start', 'home');
+        }
+      });
+    });
+
+    var config = { childList: true, subtree: true };
+
+    observer.observe(document.body, config);
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en'
+      }, 'google_translate_element');
+    }
   </script>
 
 
