@@ -598,7 +598,7 @@
     </script>
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   
-  <script type="text/javascript">
+<script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'es',
@@ -624,6 +624,7 @@
       }
     }
 
+
     function changeLanguage(language) {
       // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
       setTimeout(function(){
@@ -639,32 +640,7 @@
     window.addEventListener('load', function() {
       updateButtonStyles('es');
     });
-  </script>
-
-  
-<script type="text/javascript">
-    function replaceText(oldText, newText) {
-      document.body.innerHTML = document.body.innerHTML.replace(new RegExp(oldText, 'g'), newText);
-    }
-
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.type === 'childList' || mutation.type === 'subtree') {
-          replaceText('start', 'home');
-        }
-      });
-    });
-
-    var config = { childList: true, subtree: true };
-
-    observer.observe(document.body, config);
-
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en'
-      }, 'google_translate_element');
-    }
-  </script>
+  </script> 
 
 
 <style>
