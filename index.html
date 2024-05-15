@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <title>Grupo Leal</title>
+    <title class="notranslate">Grupo Leal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +19,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="icon" href="assets/images/home/martillo.png" type="image/png">
+
 
     <style>
         /* Ocultar el cuadro de Google Translate */
@@ -48,6 +49,7 @@
 
     </style>
 
+
 </head>
 
 <body>
@@ -57,16 +59,16 @@
     <header class="bg-[#193C3A] hidden md:block py-10"
         style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
         <div class="flex justify-start">
-            <a href="index.html" class="logo mr-auto" style="margin: 0 auto;">
-                <img class="h-18" src="assets/images/home/Logo.png" alt="Logo" />
+            <a href="index.html" class="logo mr-auto" style="display: block; text-align: center; margin: 0 auto;">
+                <img class="h-16" src="assets/images/home/Logo.png" alt="Logo" />
             </a>
             <nav class="navbar contents font-semibold text-base lg:text-lg text-[#FCEDC9] ">
                 <ul class="mx-auto flex items-start">
                     <li class="p-5 xl:p-8 active">
-                        <a href="index.html" class="hover: text-[#5D7F7B]">
-                            <span>Inicio</span>
+                        <a href="index.html" class="hover:text-[#5D7F7B]">
+                          <span>pagina de inicio</span>
                         </a>
-                    </li>
+                      </li>
                     <li class="p-5 xl:p-8 active">
                         <a href="#especial">
                             <span>Areas de especialidad</span>
@@ -282,7 +284,7 @@
                 <article>
                     <h2>
                         <span
-                            class="flex tabular-nums text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                            class="flex text-[#193C3A] text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
                             x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:200]'">
                             <span class="supports-[counter-set]:sr-only">200</span>+
                         </span>
@@ -579,13 +581,8 @@
             },
         });
     </script>
-    <style>
-        @property --num {
-            syntax: '<integer>';
-            initial-value: 0;
-            inherits: false;
-        }
-    </style>
+
+
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script>
@@ -643,6 +640,16 @@
       updateButtonStyles('es');
     });
   </script>
+
+
+<style>
+    @property --num {
+        syntax: '<integer>';
+        initial-value: 0;
+        inherits: false;
+    }
+</style>
+
 </body>
 
 </html>
