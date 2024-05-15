@@ -90,7 +90,7 @@
                     </li>
                     <li class="p-5 xl:p-8">
                         <a href="../pages/gallery.html" class="hover: text-[#5D7F7B]">
-                            <span>Galeria</span>
+                            <span>Galería</span>
                         </a>
                     </li>
                     <li class="p-5 xl:p-8">
@@ -116,7 +116,7 @@
     <nav class="bg-[#193C3A] text-white shadow-lg block md:hidden">
         <div class="container mx-auto flex items-center h-20">
             <a href="../index.html" class="flex items-center justify-center">
-                <img class="h-16 pl-8" src="../assets/images/home/logonuevo.png" alt="Logo" />
+                <img class="h-16 pl-8" src="../assets/images/home/logonblanco.png" alt="Logo" />
             </a>
             <button id="mobile-menu-button" class="ml-auto mr-4 focus:outline-none">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -136,7 +136,7 @@
                 </li>
                 <li class="p-5 xl:p-8">
                     <a href="../pages/gallery.html">
-                        <span>Galeria</span>
+                        <span>Galería</span>
                     </a>
                 </li>
                 <li class="p-5 xl:p-8">
@@ -359,7 +359,8 @@
             <!-- Texto y iconos de redes sociales -->
             <div class="flex flex-col items-center justify-center space-y-2">
                 <!-- Texto encima de los iconos -->
-                <p class="text-white"><br><strong>LEGAL SERVICES</strong> <br>120 Newport Center Dr, Newport Beach, CA 92660<br>
+                <p class="text-white"><br><strong>LEGAL SERVICES</strong> <br>120 Newport Center Dr, Newport Beach, CA
+                    92660<br>
                     (657) 210-0377 - Info@Grupoleal.us</p>
 
                 <!-- Iconos de redes sociales -->
@@ -422,11 +423,11 @@
                 layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
             }, 'google_translate_element');
         }
-    
+
         function updateButtonStyles(language) {
             var enButton = document.getElementById("en-button");
             var esButton = document.getElementById("es-button");
-            
+
             if (language === 'en') {
                 enButton.style.color = "White";
                 enButton.style.opacity = "1";
@@ -439,19 +440,24 @@
                 esButton.style.opacity = "1";
             }
         }
-    
+
         function changeLanguage(language) {
             // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
-            setTimeout(function(){
+            setTimeout(function () {
                 var select = document.querySelector("select.goog-te-combo");
                 select.value = language;
                 select.dispatchEvent(new Event('change'));
-                
+
                 updateButtonStyles(language);
-                replaceText('Inicio', 'Home');
+                setTimeout(function () {
+                    if (language === 'en') {
+                        replaceText('Inicio', 'Home');
+                    } else if (language === 'es') {
+                        replaceText('Hogar', 'Inicio');
+                    }
+                }, 1000); // Esperar 1 segundo después de cambiar el idioma para asegurar que la traducción se haya completado
             }, 500);
         }
-    
         // Función para reemplazar texto en el contenido traducido
         function replaceText(oldText, newText) {
             var homeLink = document.getElementById('home-link');
@@ -459,9 +465,9 @@
                 homeLink.textContent = newText;
             }
         }
-    
+
         // Llamar a updateButtonStyles al cargar la página para establecer los estilos iniciales
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             updateButtonStyles('es');
         });
     </script>

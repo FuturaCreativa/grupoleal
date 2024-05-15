@@ -60,37 +60,37 @@
         style="background-image: url(assets/images/home/home-banner.png); background-position: center; background-size: cover;">
         <div class="flex justify-start">
             <a href="index.html" class="logo mr-auto" style="display: block; text-align: center; margin: -20px auto 0px;">
-                <img class="h-36" src="assets/images/home/logonblanco.png" alt="Logo" />
+                <img class="h-32" src="assets/images/home/logonblanco.png" alt="Logo" />
             </a>
             <nav class="navbar contents font-semibold text-base lg:text-lg text-[#FCEDC9] ">
                 <ul class="mx-auto flex items-start">
-                    <li class="p-5 xl:p-8 active">
+                    <li class="md:pr-4 lg:p-2 xl:p-8 active">
                         <a href="index.html" class="hover:text-[#5D7F7B]">
                             <span id="home-link">Inicio</span>
                         </a>
                     </li>
                     
-                    <li class="p-5 xl:p-8 active">
+                    <li class="md:pr-4 lg:p-2 xl:p-8 active">
                         <a href="#especial">
                             <span>Areas de especialidad</span>
                         </a>
                     </li>
-                    <li class="p-5 xl:p-8">
+                    <li class="md:pr-4 lg:p-2 xl:p-8">
                         <a href="pages/gallery.html">
-                            <span>Galeria</span>
+                            <span>Galería</span>
                         </a>
                     </li>
-                    <li class="p-5 xl:p-8">
+                    <li class="md:pr-4 lg:p-2 xl:p-8">
                         <a href="pages/casos.html">
                             <span>Casos</span>
                         </a>
                     </li>
-                    <li class="p-5 xl:p-8">
+                    <li class="md:pr-4 lg:p-2 xl:p-8">
                         <a href="#abogados">
                             <span>Acerca de nosotros</span>
                         </a>
                     </li>
-                    <li class="p-5 xl:p-8">
+                    <li class="md:pr-4 lg:p-2 xl:p-8">
                         <a href="pages/contactanos.html">
                             <span>Contáctanos</span>
                         </a>
@@ -151,7 +151,7 @@
                 </li>
                 <li class="p-5 xl:p-8">
                     <a href="pages/gallery.html">
-                        <span>Galeria</span>
+                        <span>Galería</span>
                     </a>
                 </li>
                 <li class="p-5 xl:p-8">
@@ -633,7 +633,13 @@
             select.dispatchEvent(new Event('change'));
             
             updateButtonStyles(language);
-            replaceText('Inicio', 'Home');
+            setTimeout(function() {
+                if (language === 'en') {
+                    replaceText('Inicio', 'Home');
+                } else if (language === 'es') {
+                    replaceText('Hogar', 'Inicio');
+                }
+            }, 1000); // Esperar 1 segundo después de cambiar el idioma para asegurar que la traducción se haya completado
         }, 500);
     }
 

@@ -65,7 +65,7 @@
                     </li>
                     <li class="p-5 xl:p-8">
                         <a href="../pages/gallery.html">
-                            <span>Galeria</span>
+                            <span>Galería</span>
                         </a>
                     </li>
                     <li class="p-5 xl:p-8">
@@ -111,7 +111,7 @@
                 </li>
                 <li class="p-5 xl:p-8">
                     <a href="../pages/gallery.html">
-                        <span>Galeria</span>
+                        <span>Galería</span>
                     </a>
                 </li>
                 <li class="p-5 xl:p-8">
@@ -572,24 +572,29 @@
             }
         
             function changeLanguage(language) {
-                // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
-                setTimeout(function(){
-                    var select = document.querySelector("select.goog-te-combo");
-                    select.value = language;
-                    select.dispatchEvent(new Event('change'));
-                    
-                    updateButtonStyles(language);
-                    replaceText('Inicio', 'Home');
-                }, 500);
+            // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
+            setTimeout(function () {
+                var select = document.querySelector("select.goog-te-combo");
+                select.value = language;
+                select.dispatchEvent(new Event('change'));
+
+                updateButtonStyles(language);
+                setTimeout(function () {
+                    if (language === 'en') {
+                        replaceText('Inicio', 'Home');
+                    } else if (language === 'es') {
+                        replaceText('Hogar', 'Inicio');
+                    }
+                }, 1000); // Esperar 1 segundo después de cambiar el idioma para asegurar que la traducción se haya completado
+            }, 500);
+        }
+        // Función para reemplazar texto en el contenido traducido
+        function replaceText(oldText, newText) {
+            var homeLink = document.getElementById('home-link');
+            if (homeLink && homeLink.textContent === oldText) {
+                homeLink.textContent = newText;
             }
-        
-            // Función para reemplazar texto en el contenido traducido
-            function replaceText(oldText, newText) {
-                var homeLink = document.getElementById('home-link');
-                if (homeLink && homeLink.textContent === oldText) {
-                    homeLink.textContent = newText;
-                }
-            }
+        }
         
             // Llamar a updateButtonStyles al cargar la página para establecer los estilos iniciales
             window.addEventListener('load', function() {
