@@ -66,9 +66,10 @@
                 <ul class="mx-auto flex items-start">
                     <li class="p-5 xl:p-8 active">
                         <a href="index.html" class="hover:text-[#5D7F7B]">
-                          <span>Inicio</span>
+                            <span id="home-link">Inicio</span>
                         </a>
-                      </li>
+                    </li>
+                    
                     <li class="p-5 xl:p-8 active">
                         <a href="#especial">
                             <span>Areas de especialidad</span>
@@ -600,47 +601,56 @@
   
 <script type="text/javascript">
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'en,es',
-        layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
-      }, 'google_translate_element');
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'en,es',
+            layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
+        }, 'google_translate_element');
     }
 
     function updateButtonStyles(language) {
-      var enButton = document.getElementById("en-button");
-      var esButton = document.getElementById("es-button");
-      
-      if (language === 'en') {
-        enButton.style.color = "White";
-        enButton.style.opacity = "1";
-        esButton.style.color = "White";
-        esButton.style.opacity = "0.5";
-      } else if (language === 'es') {
-        enButton.style.color = "White";
-        enButton.style.opacity = "0.5";
-        esButton.style.color = "White";
-        esButton.style.opacity = "1";
-      }
+        var enButton = document.getElementById("en-button");
+        var esButton = document.getElementById("es-button");
+        
+        if (language === 'en') {
+            enButton.style.color = "White";
+            enButton.style.opacity = "1";
+            esButton.style.color = "White";
+            esButton.style.opacity = "0.5";
+        } else if (language === 'es') {
+            enButton.style.color = "White";
+            enButton.style.opacity = "0.5";
+            esButton.style.color = "White";
+            esButton.style.opacity = "1";
+        }
     }
-
 
     function changeLanguage(language) {
-      // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
-      setTimeout(function(){
-        var select = document.querySelector("select.goog-te-combo");
-        select.value = language;
-        select.dispatchEvent(new Event('change'));
-        
-        updateButtonStyles(language);
-      }, 500);
+        // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
+        setTimeout(function(){
+            var select = document.querySelector("select.goog-te-combo");
+            select.value = language;
+            select.dispatchEvent(new Event('change'));
+            
+            updateButtonStyles(language);
+            replaceText('Inicio', 'Home');
+        }, 500);
     }
-    
+
+    // Función para reemplazar texto en el contenido traducido
+    function replaceText(oldText, newText) {
+        var homeLink = document.getElementById('home-link');
+        if (homeLink && homeLink.textContent === oldText) {
+            homeLink.textContent = newText;
+        }
+    }
+
     // Llamar a updateButtonStyles al cargar la página para establecer los estilos iniciales
     window.addEventListener('load', function() {
-      updateButtonStyles('es');
+        updateButtonStyles('es');
     });
-  </script> 
+</script>
+
 
 
 <style>
