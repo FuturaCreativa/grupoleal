@@ -55,7 +55,7 @@
                 <ul href="index.html" class="mx-auto flex items-start font-bold">
                     <li class="p-5 xl:p-8 active">
                         <a href="../index.html">
-                            <span>Inicio</span>
+                            <span id="home-link">Inicio</span>
                         </a>
                     </li>
                     <li class="p-5 xl:p-8 active">
@@ -545,56 +545,55 @@
     <script type="text/javascript"
         src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages: 'en,es',
-                layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
-            }, 'google_translate_element');
-        }
-
-        function updateButtonStyles(language) {
-            var enButton = document.getElementById("en-button");
-            var esButton = document.getElementById("es-button");
-
-            if (language === 'en') {
-                enButton.style.color = "white";
-                enButton.style.opacity = "1";
-                esButton.style.color = "white";
-                esButton.style.opacity = "0.5";
-            } else if (language === 'es') {
-                enButton.style.color = "white";
-                enButton.style.opacity = "0.5";
-                esButton.style.color = "white";
-                esButton.style.opacity = "1";
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'es',
+                    includedLanguages: 'en,es',
+                    layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
+                }, 'google_translate_element');
             }
-        }
-
-        function changeLanguage(language) {
-            // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
-            setTimeout(function () {
-                var select = document.querySelector("select.goog-te-combo");
-                select.value = language;
-                select.dispatchEvent(new Event('change'));
-
-                updateButtonStyles(language);
-            }, 500);
-        }
-
-        // Llamar a updateButtonStyles al cargar la página para establecer los estilos iniciales
-        window.addEventListener('load', function () {
-            updateButtonStyles('es');
-        });
-    </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenuContainer = document.getElementById('mobile-menu-container');
-    
-                mobileMenuButton.addEventListener('click', function () {
-                    mobileMenuContainer.classList.toggle('hidden');
-                });
+        
+            function updateButtonStyles(language) {
+                var enButton = document.getElementById("en-button");
+                var esButton = document.getElementById("es-button");
+                
+                if (language === 'en') {
+                    enButton.style.color = "White";
+                    enButton.style.opacity = "1";
+                    esButton.style.color = "White";
+                    esButton.style.opacity = "0.5";
+                } else if (language === 'es') {
+                    enButton.style.color = "White";
+                    enButton.style.opacity = "0.5";
+                    esButton.style.color = "White";
+                    esButton.style.opacity = "1";
+                }
+            }
+        
+            function changeLanguage(language) {
+                // Esperar 500 milisegundos para asegurar que el widget de Google Translate esté cargado
+                setTimeout(function(){
+                    var select = document.querySelector("select.goog-te-combo");
+                    select.value = language;
+                    select.dispatchEvent(new Event('change'));
+                    
+                    updateButtonStyles(language);
+                    replaceText('Inicio', 'Home');
+                }, 500);
+            }
+        
+            // Función para reemplazar texto en el contenido traducido
+            function replaceText(oldText, newText) {
+                var homeLink = document.getElementById('home-link');
+                if (homeLink && homeLink.textContent === oldText) {
+                    homeLink.textContent = newText;
+                }
+            }
+        
+            // Llamar a updateButtonStyles al cargar la página para establecer los estilos iniciales
+            window.addEventListener('load', function() {
+                updateButtonStyles('es');
             });
         </script>
 </body>
