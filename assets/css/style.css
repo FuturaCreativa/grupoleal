@@ -81,10 +81,12 @@
   background: orange;
 }
 
-summary span{  
-  display: flex;
-  height: 42px;
-  width: 200px;
-  list-style-type: none;
-  outline: none;
+summary  {
+  list-style: none;
+}
+
+/* sigh, Safari again */
+
+summary::-webkit-details-marker {
+  display: none;
 }
